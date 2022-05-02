@@ -1,0 +1,1 @@
+cmd_/home/maxime/Documents/Assignment09/Module.symvers := sed 's/\.ko$$/\.o/' /home/maxime/Documents/Assignment09/modules.order | scripts/mod/modpost  -a  -o /home/maxime/Documents/Assignment09/Module.symvers -e -i Module.symvers  -N -T -

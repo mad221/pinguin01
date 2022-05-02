@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 55a30ca69350..a6b9f7cc1740 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 17
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc8
++EXTRAVERSION = -thor_kernel
+ NAME = Superb Owl
+ 
+ # *DOCUMENTATION*

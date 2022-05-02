@@ -1,0 +1,1 @@
+cmd_/home/maxime/Documents/Assignment04/hello.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/maxime/Documents/Assignment04/hello.ko /home/maxime/Documents/Assignment04/hello.o /home/maxime/Documents/Assignment04/hello.mod.o;  true

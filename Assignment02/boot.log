@@ -1,0 +1,1463 @@
+Mar 16 10:45:16 mpouzol kernel: Linux version 5.17.0-thor_kernel-mpouzol-dirty (maxime@mpouzol) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.38) #2 SMP PREEMPT Tue Mar 15 18:13:44 UTC 2022
+Mar 16 10:45:16 mpouzol kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-thor_kernel-5.17.0-mpouzol root=UUID=6d5afe33-937c-43b0-826c-ca6b148c97ff rw loglevel=3 quiet
+Mar 16 10:45:16 mpouzol kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Mar 16 10:45:16 mpouzol kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Mar 16 10:45:16 mpouzol kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Mar 16 10:45:16 mpouzol kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Mar 16 10:45:16 mpouzol kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Mar 16 10:45:16 mpouzol kernel: signal: max sigframe size: 1776
+Mar 16 10:45:16 mpouzol kernel: BIOS-provided physical RAM map:
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Mar 16 10:45:16 mpouzol kernel: BIOS-e820: [mem 0x0000000100000000-0x0000000233efffff] usable
+Mar 16 10:45:16 mpouzol kernel: NX (Execute Disable) protection: active
+Mar 16 10:45:16 mpouzol kernel: SMBIOS 2.5 present.
+Mar 16 10:45:16 mpouzol kernel: DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Mar 16 10:45:16 mpouzol kernel: Hypervisor detected: KVM
+Mar 16 10:45:16 mpouzol kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Mar 16 10:45:16 mpouzol kernel: kvm-clock: using sched offset of 7264335500165 cycles
+Mar 16 10:45:16 mpouzol kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Mar 16 10:45:16 mpouzol kernel: tsc: Detected 2400.000 MHz processor
+Mar 16 10:45:16 mpouzol kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Mar 16 10:45:16 mpouzol kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Mar 16 10:45:16 mpouzol kernel: last_pfn = 0x233f00 max_arch_pfn = 0x400000000
+Mar 16 10:45:16 mpouzol kernel: Disabled
+Mar 16 10:45:16 mpouzol kernel: x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Mar 16 10:45:16 mpouzol kernel: CPU MTRRs all blank - virtualized system.
+Mar 16 10:45:16 mpouzol kernel: x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Mar 16 10:45:16 mpouzol kernel: last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+Mar 16 10:45:16 mpouzol kernel: found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Mar 16 10:45:16 mpouzol kernel: RAMDISK: [mem 0x34b05000-0x36579fff]
+Mar 16 10:45:16 mpouzol kernel: ACPI: Early table checksum verification disabled
+Mar 16 10:45:16 mpouzol kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Mar 16 10:45:16 mpouzol kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Mar 16 10:45:16 mpouzol kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Mar 16 10:45:16 mpouzol kernel: ACPI: DSDT 0x00000000DFFF0480 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+Mar 16 10:45:16 mpouzol kernel: ACPI: FACS 0x00000000DFFF0200 000040
+Mar 16 10:45:16 mpouzol kernel: ACPI: FACS 0x00000000DFFF0200 000040
+Mar 16 10:45:16 mpouzol kernel: ACPI: APIC 0x00000000DFFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Mar 16 10:45:16 mpouzol kernel: ACPI: SSDT 0x00000000DFFF02B0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+Mar 16 10:45:16 mpouzol kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0480-0xdfff27a4]
+Mar 16 10:45:16 mpouzol kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+Mar 16 10:45:16 mpouzol kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+Mar 16 10:45:16 mpouzol kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02ab]
+Mar 16 10:45:16 mpouzol kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02b0-0xdfff047b]
+Mar 16 10:45:16 mpouzol kernel: No NUMA configuration found
+Mar 16 10:45:16 mpouzol kernel: Faking a node at [mem 0x0000000000000000-0x0000000233efffff]
+Mar 16 10:45:16 mpouzol kernel: NODE_DATA(0) allocated [mem 0x233efc000-0x233efffff]
+Mar 16 10:45:16 mpouzol kernel: Zone ranges:
+Mar 16 10:45:16 mpouzol kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Mar 16 10:45:16 mpouzol kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Mar 16 10:45:16 mpouzol kernel:   Normal   [mem 0x0000000100000000-0x0000000233efffff]
+Mar 16 10:45:16 mpouzol kernel:   Device   empty
+Mar 16 10:45:16 mpouzol kernel: Movable zone start for each node
+Mar 16 10:45:16 mpouzol kernel: Early memory node ranges
+Mar 16 10:45:16 mpouzol kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Mar 16 10:45:16 mpouzol kernel:   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+Mar 16 10:45:16 mpouzol kernel:   node   0: [mem 0x0000000100000000-0x0000000233efffff]
+Mar 16 10:45:16 mpouzol kernel: Initmem setup node 0 [mem 0x0000000000001000-0x0000000233efffff]
+Mar 16 10:45:16 mpouzol kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+Mar 16 10:45:16 mpouzol kernel: On node 0, zone DMA: 97 pages in unavailable ranges
+Mar 16 10:45:16 mpouzol kernel: On node 0, zone Normal: 16 pages in unavailable ranges
+Mar 16 10:45:16 mpouzol kernel: On node 0, zone Normal: 16640 pages in unavailable ranges
+Mar 16 10:45:16 mpouzol kernel: ACPI: PM-Timer IO Port: 0x4008
+Mar 16 10:45:16 mpouzol kernel: IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+Mar 16 10:45:16 mpouzol kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Mar 16 10:45:16 mpouzol kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+Mar 16 10:45:16 mpouzol kernel: smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+Mar 16 10:45:16 mpouzol kernel: PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+Mar 16 10:45:16 mpouzol kernel: [mem 0xe0000000-0xfebfffff] available for PCI devices
+Mar 16 10:45:16 mpouzol kernel: Booting paravirtualized kernel on KVM
+Mar 16 10:45:16 mpouzol kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370452778343963 ns
+Mar 16 10:45:16 mpouzol kernel: setup_percpu: NR_CPUS:320 nr_cpumask_bits:320 nr_cpu_ids:4 nr_node_ids:1
+Mar 16 10:45:16 mpouzol kernel: percpu: Embedded 62 pages/cpu s217088 r8192 d28672 u524288
+Mar 16 10:45:16 mpouzol kernel: pcpu-alloc: s217088 r8192 d28672 u524288 alloc=1*2097152
+Mar 16 10:45:16 mpouzol kernel: pcpu-alloc: [0] 0 1 2 3 
+Mar 16 10:45:16 mpouzol kernel: kvm-guest: PV spinlocks enabled
+Mar 16 10:45:16 mpouzol kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: Fallback order for Node 0: 0 
+Mar 16 10:45:16 mpouzol kernel: Built 1 zonelists, mobility grouping on.  Total pages: 2144500
+Mar 16 10:45:16 mpouzol kernel: Policy zone: Normal
+Mar 16 10:45:16 mpouzol kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-thor_kernel-5.17.0-mpouzol root=UUID=6d5afe33-937c-43b0-826c-ca6b148c97ff rw loglevel=3 quiet
+Mar 16 10:45:16 mpouzol kernel: Unknown kernel command line parameters "BOOT_IMAGE=/boot/vmlinuz-thor_kernel-5.17.0-mpouzol", will be passed to user space.
+Mar 16 10:45:16 mpouzol kernel: Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: mem auto-init: stack:byref_all(zero), heap alloc:on, heap free:off
+Mar 16 10:45:16 mpouzol kernel: Memory: 8418668K/8714808K available (14343K kernel code, 2106K rwdata, 6292K rodata, 1784K init, 3824K bss, 295880K reserved, 0K cma-reserved)
+Mar 16 10:45:16 mpouzol kernel: random: get_random_u64 called from __kmem_cache_create+0x2a/0x550 with crng_init=0
+Mar 16 10:45:16 mpouzol kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Mar 16 10:45:16 mpouzol kernel: Kernel/User page tables isolation: enabled
+Mar 16 10:45:16 mpouzol kernel: ftrace: allocating 45122 entries in 177 pages
+Mar 16 10:45:16 mpouzol kernel: ftrace: allocated 177 pages with 4 groups
+Mar 16 10:45:16 mpouzol kernel: Dynamic Preempt: full
+Mar 16 10:45:16 mpouzol kernel: rcu: Preemptible hierarchical RCU implementation.
+Mar 16 10:45:16 mpouzol kernel: rcu:         RCU restricting CPUs from NR_CPUS=320 to nr_cpu_ids=4.
+Mar 16 10:45:16 mpouzol kernel: rcu:         RCU priority boosting: priority 1 delay 500 ms.
+Mar 16 10:45:16 mpouzol kernel:         Trampoline variant of Tasks RCU enabled.
+Mar 16 10:45:16 mpouzol kernel:         Rude variant of Tasks RCU enabled.
+Mar 16 10:45:16 mpouzol kernel:         Tracing variant of Tasks RCU enabled.
+Mar 16 10:45:16 mpouzol kernel: rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+Mar 16 10:45:16 mpouzol kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Mar 16 10:45:16 mpouzol kernel: NR_IRQS: 20736, nr_irqs: 456, preallocated irqs: 16
+Mar 16 10:45:16 mpouzol kernel: kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+Mar 16 10:45:16 mpouzol kernel: Console: colour dummy device 80x25
+Mar 16 10:45:16 mpouzol kernel: printk: console [tty0] enabled
+Mar 16 10:45:16 mpouzol kernel: ACPI: Core revision 20211217
+Mar 16 10:45:16 mpouzol kernel: APIC: Switch to symmetric I/O mode setup
+Mar 16 10:45:16 mpouzol kernel: x2apic enabled
+Mar 16 10:45:16 mpouzol kernel: Switched APIC routing to physical x2apic.
+Mar 16 10:45:16 mpouzol kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Mar 16 10:45:16 mpouzol kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x22983777dd9, max_idle_ns: 440795300422 ns
+Mar 16 10:45:16 mpouzol kernel: Calibrating delay loop (skipped) preset value.. 4801.00 BogoMIPS (lpj=8000000)
+Mar 16 10:45:16 mpouzol kernel: pid_max: default: 32768 minimum: 301
+Mar 16 10:45:16 mpouzol kernel: LSM: Security Framework initializing
+Mar 16 10:45:16 mpouzol kernel: landlock: Up and running.
+Mar 16 10:45:16 mpouzol kernel: Yama: becoming mindful.
+Mar 16 10:45:16 mpouzol kernel: LSM support for eBPF active
+Mar 16 10:45:16 mpouzol kernel: Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: unchecked MSR access error: WRMSR to 0x3a (tried to write 0x0000000000000001) at rIP: 0xffffffff96a71984 (native_write_msr+0x4/0x20)
+Mar 16 10:45:16 mpouzol kernel: Call Trace:
+Mar 16 10:45:16 mpouzol kernel:  <TASK>
+Mar 16 10:45:16 mpouzol kernel:  init_ia32_feat_ctl+0xb2/0x3e0
+Mar 16 10:45:16 mpouzol kernel:  init_intel+0xbe/0x4c0
+Mar 16 10:45:16 mpouzol kernel:  identify_cpu+0x1b0/0x4b0
+Mar 16 10:45:16 mpouzol kernel:  identify_boot_cpu+0xc/0x94
+Mar 16 10:45:16 mpouzol kernel:  check_bugs+0x28/0xb3c
+Mar 16 10:45:16 mpouzol kernel:  ? pmd_val+0x7/0x10
+Mar 16 10:45:16 mpouzol kernel:  ? __get_locked_pte+0xce/0x110
+Mar 16 10:45:16 mpouzol kernel:  start_kernel+0x993/0x9c9
+Mar 16 10:45:16 mpouzol kernel:  secondary_startup_64_no_verify+0xd5/0xdb
+Mar 16 10:45:16 mpouzol kernel:  </TASK>
+Mar 16 10:45:16 mpouzol kernel: Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+Mar 16 10:45:16 mpouzol kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+Mar 16 10:45:16 mpouzol kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Mar 16 10:45:16 mpouzol kernel: Spectre V2 : Mitigation: Retpolines
+Mar 16 10:45:16 mpouzol kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Mar 16 10:45:16 mpouzol kernel: Speculative Store Bypass: Vulnerable
+Mar 16 10:45:16 mpouzol kernel: SRBDS: Unknown: Dependent on hypervisor status
+Mar 16 10:45:16 mpouzol kernel: MDS: Mitigation: Clear CPU buffers
+Mar 16 10:45:16 mpouzol kernel: Freeing SMP alternatives memory: 36K
+Mar 16 10:45:16 mpouzol kernel: smpboot: CPU0: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz (family: 0x6, model: 0x9e, stepping: 0xa)
+Mar 16 10:45:16 mpouzol kernel: cblist_init_generic: Setting adjustable number of callback queues.
+Mar 16 10:45:16 mpouzol kernel: cblist_init_generic: Setting shift to 2 and lim to 1.
+Mar 16 10:45:16 mpouzol kernel: cblist_init_generic: Setting shift to 2 and lim to 1.
+Mar 16 10:45:16 mpouzol kernel: cblist_init_generic: Setting shift to 2 and lim to 1.
+Mar 16 10:45:16 mpouzol kernel: Performance Events: unsupported p6 CPU model 158 no PMU driver, software events only.
+Mar 16 10:45:16 mpouzol kernel: rcu: Hierarchical SRCU implementation.
+Mar 16 10:45:16 mpouzol kernel: NMI watchdog: Perf NMI watchdog permanently disabled
+Mar 16 10:45:16 mpouzol kernel: smp: Bringing up secondary CPUs ...
+Mar 16 10:45:16 mpouzol kernel: x86: Booting SMP configuration:
+Mar 16 10:45:16 mpouzol kernel: .... node  #0, CPUs:      #1
+Mar 16 10:45:16 mpouzol kernel: Call Trace:
+Mar 16 10:45:16 mpouzol kernel:  <TASK>
+Mar 16 10:45:16 mpouzol kernel:  init_ia32_feat_ctl+0xb0/0x3e0
+Mar 16 10:45:16 mpouzol kernel:  init_intel+0xbe/0x4c0
+Mar 16 10:45:16 mpouzol kernel:  identify_cpu+0x1b0/0x4b0
+Mar 16 10:45:16 mpouzol kernel:  identify_secondary_cpu+0x13/0x80
+Mar 16 10:45:16 mpouzol kernel:  smp_store_cpu_info+0x45/0x50
+Mar 16 10:45:16 mpouzol kernel:  start_secondary+0x4f/0x150
+Mar 16 10:45:16 mpouzol kernel:  secondary_startup_64_no_verify+0xd5/0xdb
+Mar 16 10:45:16 mpouzol kernel:  </TASK>
+Mar 16 10:45:16 mpouzol kernel:  #2
+Mar 16 10:45:16 mpouzol kernel: Call Trace:
+Mar 16 10:45:16 mpouzol kernel:  <TASK>
+Mar 16 10:45:16 mpouzol kernel:  init_ia32_feat_ctl+0xb0/0x3e0
+Mar 16 10:45:16 mpouzol kernel:  init_intel+0xbe/0x4c0
+Mar 16 10:45:16 mpouzol kernel:  identify_cpu+0x1b0/0x4b0
+Mar 16 10:45:16 mpouzol kernel:  identify_secondary_cpu+0x13/0x80
+Mar 16 10:45:16 mpouzol kernel:  smp_store_cpu_info+0x45/0x50
+Mar 16 10:45:16 mpouzol kernel:  start_secondary+0x4f/0x150
+Mar 16 10:45:16 mpouzol kernel:  secondary_startup_64_no_verify+0xd5/0xdb
+Mar 16 10:45:16 mpouzol kernel:  </TASK>
+Mar 16 10:45:16 mpouzol kernel:  #3
+Mar 16 10:45:16 mpouzol kernel: Call Trace:
+Mar 16 10:45:16 mpouzol kernel:  <TASK>
+Mar 16 10:45:16 mpouzol kernel:  init_ia32_feat_ctl+0xb0/0x3e0
+Mar 16 10:45:16 mpouzol kernel:  init_intel+0xbe/0x4c0
+Mar 16 10:45:16 mpouzol kernel:  identify_cpu+0x1b0/0x4b0
+Mar 16 10:45:16 mpouzol kernel:  identify_secondary_cpu+0x13/0x80
+Mar 16 10:45:16 mpouzol kernel:  smp_store_cpu_info+0x45/0x50
+Mar 16 10:45:16 mpouzol kernel:  start_secondary+0x4f/0x150
+Mar 16 10:45:16 mpouzol kernel:  secondary_startup_64_no_verify+0xd5/0xdb
+Mar 16 10:45:16 mpouzol kernel:  </TASK>
+Mar 16 10:45:16 mpouzol kernel: smp: Brought up 1 node, 4 CPUs
+Mar 16 10:45:16 mpouzol kernel: smpboot: Max logical packages: 1
+Mar 16 10:45:16 mpouzol kernel: smpboot: Total of 4 processors activated (19207.00 BogoMIPS)
+Mar 16 10:45:16 mpouzol kernel: devtmpfs: initialized
+Mar 16 10:45:16 mpouzol kernel: x86/mm: Memory block size: 128MB
+Mar 16 10:45:16 mpouzol kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+Mar 16 10:45:16 mpouzol kernel: futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: pinctrl core: initialized pinctrl subsystem
+Mar 16 10:45:16 mpouzol kernel: PM: RTC time: 10:45:13, date: 2022-03-16
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Mar 16 10:45:16 mpouzol kernel: DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+Mar 16 10:45:16 mpouzol kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Mar 16 10:45:16 mpouzol kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Mar 16 10:45:16 mpouzol kernel: audit: initializing netlink subsys (disabled)
+Mar 16 10:45:16 mpouzol kernel: audit: type=2000 audit(1647434779.704:1): state=initialized audit_enabled=0 res=1
+Mar 16 10:45:16 mpouzol kernel: thermal_sys: Registered thermal governor 'fair_share'
+Mar 16 10:45:16 mpouzol kernel: thermal_sys: Registered thermal governor 'bang_bang'
+Mar 16 10:45:16 mpouzol kernel: thermal_sys: Registered thermal governor 'step_wise'
+Mar 16 10:45:16 mpouzol kernel: thermal_sys: Registered thermal governor 'user_space'
+Mar 16 10:45:16 mpouzol kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Mar 16 10:45:16 mpouzol kernel: cpuidle: using governor ladder
+Mar 16 10:45:16 mpouzol kernel: cpuidle: using governor menu
+Mar 16 10:45:16 mpouzol kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Mar 16 10:45:16 mpouzol kernel: PCI: Using configuration type 1 for base access
+Mar 16 10:45:16 mpouzol kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Mar 16 10:45:16 mpouzol kernel: HugeTLB: can free 6 vmemmap pages for hugepages-2048kB
+Mar 16 10:45:16 mpouzol kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(Module Device)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(Processor Device)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(Linux-Dell-Video)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+Mar 16 10:45:16 mpouzol kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+Mar 16 10:45:16 mpouzol kernel: ACPI: Interpreter enabled
+Mar 16 10:45:16 mpouzol kernel: ACPI: PM: (supports S0 S5)
+Mar 16 10:45:16 mpouzol kernel: ACPI: Using IOAPIC for interrupt routing
+Mar 16 10:45:16 mpouzol kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Mar 16 10:45:16 mpouzol kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+Mar 16 10:45:16 mpouzol kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Mar 16 10:45:16 mpouzol kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI EDR HPX-Type3]
+Mar 16 10:45:16 mpouzol kernel: acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Mar 16 10:45:16 mpouzol kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Mar 16 10:45:16 mpouzol kernel: PCI host bridge to bus 0000:00
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: reg 0x14: [mem 0xf0000000-0xf0ffffff pref]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: reg 0x18: [mem 0xf1000000-0xf11fffff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:03.0: reg 0x10: [mem 0xf1200000-0xf121ffff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:04.0: reg 0x14: [mem 0xf1400000-0xf17fffff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:04.0: reg 0x18: [mem 0xf1800000-0xf1803fff pref]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:06.0: reg 0x10: [mem 0xf1804000-0xf1804fff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0b.0: reg 0x10: [mem 0xf1805000-0xf1805fff]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:0d.0: reg 0x24: [mem 0xf1806000-0xf1807fff]
+Mar 16 10:45:16 mpouzol kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+Mar 16 10:45:16 mpouzol kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Mar 16 10:45:16 mpouzol kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+Mar 16 10:45:16 mpouzol kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Mar 16 10:45:16 mpouzol kernel: iommu: Default domain type: Translated 
+Mar 16 10:45:16 mpouzol kernel: iommu: DMA domain TLB invalidation policy: lazy mode 
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:02.0: vgaarb: bridge control possible
+Mar 16 10:45:16 mpouzol kernel: vgaarb: loaded
+Mar 16 10:45:16 mpouzol kernel: SCSI subsystem initialized
+Mar 16 10:45:16 mpouzol kernel: libata version 3.00 loaded.
+Mar 16 10:45:16 mpouzol kernel: ACPI: bus type USB registered
+Mar 16 10:45:16 mpouzol kernel: usbcore: registered new interface driver usbfs
+Mar 16 10:45:16 mpouzol kernel: usbcore: registered new interface driver hub
+Mar 16 10:45:16 mpouzol kernel: usbcore: registered new device driver usb
+Mar 16 10:45:16 mpouzol kernel: pps_core: LinuxPPS API ver. 1 registered
+Mar 16 10:45:16 mpouzol kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Mar 16 10:45:16 mpouzol kernel: PTP clock support registered
+Mar 16 10:45:16 mpouzol kernel: EDAC MC: Ver: 3.0.0
+Mar 16 10:45:16 mpouzol kernel: NetLabel: Initializing
+Mar 16 10:45:16 mpouzol kernel: NetLabel:  domain hash size = 128
+Mar 16 10:45:16 mpouzol kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Mar 16 10:45:16 mpouzol kernel: NetLabel:  unlabeled traffic allowed by default
+Mar 16 10:45:16 mpouzol kernel: mctp: management component transport protocol core
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_MCTP protocol family
+Mar 16 10:45:16 mpouzol kernel: PCI: Using ACPI for IRQ routing
+Mar 16 10:45:16 mpouzol kernel: PCI: pci_cache_line_size set to 64 bytes
+Mar 16 10:45:16 mpouzol kernel: e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Mar 16 10:45:16 mpouzol kernel: e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+Mar 16 10:45:16 mpouzol kernel: e820: reserve RAM buffer [mem 0x233f00000-0x233ffffff]
+Mar 16 10:45:16 mpouzol kernel: clocksource: Switched to clocksource kvm-clock
+Mar 16 10:45:16 mpouzol kernel: VFS: Disk quotas dquot_6.6.0
+Mar 16 10:45:16 mpouzol kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Mar 16 10:45:16 mpouzol kernel: pnp: PnP ACPI init
+Mar 16 10:45:16 mpouzol kernel: pnp: PnP ACPI: found 2 devices
+Mar 16 10:45:16 mpouzol kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_INET protocol family
+Mar 16 10:45:16 mpouzol kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: TCP: Hash tables configured (established 131072 bind 65536)
+Mar 16 10:45:16 mpouzol kernel: MPTCP token hash table entries: 16384 (order: 6, 393216 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_XDP protocol family
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Mar 16 10:45:16 mpouzol kernel: pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Mar 16 10:45:16 mpouzol kernel: pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Mar 16 10:45:16 mpouzol kernel: PCI: CLS 0 bytes, default 64
+Mar 16 10:45:16 mpouzol kernel: Trying to unpack rootfs image as initramfs...
+Mar 16 10:45:16 mpouzol kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Mar 16 10:45:16 mpouzol kernel: software IO TLB: mapped [mem 0x00000000dbff0000-0x00000000dfff0000] (64MB)
+Mar 16 10:45:16 mpouzol kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x22983777dd9, max_idle_ns: 440795300422 ns
+Mar 16 10:45:16 mpouzol kernel: clocksource: Switched to clocksource tsc
+Mar 16 10:45:16 mpouzol kernel: platform rtc_cmos: registered platform RTC device (no PNP device found)
+Mar 16 10:45:16 mpouzol kernel: Initialise system trusted keyrings
+Mar 16 10:45:16 mpouzol kernel: Key type blacklist registered
+Mar 16 10:45:16 mpouzol kernel: workingset: timestamp_bits=41 max_order=22 bucket_order=0
+Mar 16 10:45:16 mpouzol kernel: zbud: loaded
+Mar 16 10:45:16 mpouzol kernel: Key type asymmetric registered
+Mar 16 10:45:16 mpouzol kernel: Asymmetric key parser 'x509' registered
+Mar 16 10:45:16 mpouzol kernel: Freeing initrd memory: 27092K
+Mar 16 10:45:16 mpouzol kernel: alg: self-tests for CTR-KDF (hmac(sha256)) passed
+Mar 16 10:45:16 mpouzol kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+Mar 16 10:45:16 mpouzol kernel: io scheduler mq-deadline registered
+Mar 16 10:45:16 mpouzol kernel: io scheduler kyber registered
+Mar 16 10:45:16 mpouzol kernel: io scheduler bfq registered
+Mar 16 10:45:16 mpouzol kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Mar 16 10:45:16 mpouzol kernel: ACPI: AC: AC Adapter [AC] (on-line)
+Mar 16 10:45:16 mpouzol kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Mar 16 10:45:16 mpouzol kernel: ACPI: button: Power Button [PWRF]
+Mar 16 10:45:16 mpouzol kernel: input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Mar 16 10:45:16 mpouzol kernel: ACPI: button: Sleep Button [SLPF]
+Mar 16 10:45:16 mpouzol kernel: ACPI: battery: Slot [BAT0] (battery present)
+Mar 16 10:45:16 mpouzol kernel: Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+Mar 16 10:45:16 mpouzol kernel: Non-volatile memory driver v1.3
+Mar 16 10:45:16 mpouzol kernel: Linux agpgart interface v0.103
+Mar 16 10:45:16 mpouzol kernel: AMD-Vi: AMD IOMMUv2 functionality not available on this system - This is not a bug.
+Mar 16 10:45:16 mpouzol kernel: ACPI: bus type drm_connector registered
+Mar 16 10:45:16 mpouzol kernel: ahci 0000:00:0d.0: version 3.0
+Mar 16 10:45:16 mpouzol kernel: ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Mar 16 10:45:16 mpouzol kernel: ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Mar 16 10:45:16 mpouzol kernel: ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Mar 16 10:45:16 mpouzol kernel: scsi host0: ahci
+Mar 16 10:45:16 mpouzol kernel: ata1: SATA max UDMA/133 abar m8192@0xf1806000 port 0xf1806100 irq 21
+Mar 16 10:45:16 mpouzol kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Mar 16 10:45:16 mpouzol kernel: ehci-pci: EHCI PCI platform driver
+Mar 16 10:45:16 mpouzol kernel: ehci-pci 0000:00:0b.0: EHCI Host Controller
+Mar 16 10:45:16 mpouzol kernel: ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 1
+Mar 16 10:45:16 mpouzol kernel: ehci-pci 0000:00:0b.0: irq 19, io mem 0xf1805000
+Mar 16 10:45:16 mpouzol kernel: ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
+Mar 16 10:45:16 mpouzol kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.17
+Mar 16 10:45:16 mpouzol kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 16 10:45:16 mpouzol kernel: usb usb1: Product: EHCI Host Controller
+Mar 16 10:45:16 mpouzol kernel: usb usb1: Manufacturer: Linux 5.17.0-thor_kernel-mpouzol-dirty ehci_hcd
+Mar 16 10:45:16 mpouzol kernel: usb usb1: SerialNumber: 0000:00:0b.0
+Mar 16 10:45:16 mpouzol kernel: hub 1-0:1.0: USB hub found
+Mar 16 10:45:16 mpouzol kernel: hub 1-0:1.0: 12 ports detected
+Mar 16 10:45:16 mpouzol kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Mar 16 10:45:16 mpouzol kernel: ohci-pci: OHCI PCI platform driver
+Mar 16 10:45:16 mpouzol kernel: ohci-pci 0000:00:06.0: OHCI PCI host controller
+Mar 16 10:45:16 mpouzol kernel: ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 2
+Mar 16 10:45:16 mpouzol kernel: ohci-pci 0000:00:06.0: irq 22, io mem 0xf1804000
+Mar 16 10:45:16 mpouzol kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.17
+Mar 16 10:45:16 mpouzol kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 16 10:45:16 mpouzol kernel: usb usb2: Product: OHCI PCI host controller
+Mar 16 10:45:16 mpouzol kernel: usb usb2: Manufacturer: Linux 5.17.0-thor_kernel-mpouzol-dirty ohci_hcd
+Mar 16 10:45:16 mpouzol kernel: usb usb2: SerialNumber: 0000:00:06.0
+Mar 16 10:45:16 mpouzol kernel: hub 2-0:1.0: USB hub found
+Mar 16 10:45:16 mpouzol kernel: hub 2-0:1.0: 12 ports detected
+Mar 16 10:45:16 mpouzol kernel: uhci_hcd: USB Universal Host Controller Interface driver
+Mar 16 10:45:16 mpouzol kernel: usbcore: registered new interface driver usbserial_generic
+Mar 16 10:45:16 mpouzol kernel: usbserial: USB Serial support registered for generic
+Mar 16 10:45:16 mpouzol kernel: rtc_cmos rtc_cmos: registered as rtc0
+Mar 16 10:45:16 mpouzol kernel: rtc_cmos rtc_cmos: setting system clock to 2022-03-16T10:45:14 UTC (1647427514)
+Mar 16 10:45:16 mpouzol kernel: rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Mar 16 10:45:16 mpouzol kernel: intel_pstate: CPU model not supported
+Mar 16 10:45:16 mpouzol kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Mar 16 10:45:16 mpouzol kernel: vesafb: mode is 640x480x32, linelength=2560, pages=0
+Mar 16 10:45:16 mpouzol kernel: vesafb: scrolling: redraw
+Mar 16 10:45:16 mpouzol kernel: vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Mar 16 10:45:16 mpouzol kernel: vesafb: framebuffer at 0xf0000000, mapped to 0x00000000625b641c, using 1216k, total 1216k
+Mar 16 10:45:16 mpouzol kernel: fbcon: Deferring console take-over
+Mar 16 10:45:16 mpouzol kernel: fb0: VESA VGA frame buffer device
+Mar 16 10:45:16 mpouzol kernel: hid: raw HID events driver (C) Jiri Kosina
+Mar 16 10:45:16 mpouzol kernel: intel_pmc_core intel_pmc_core.0:  initialized
+Mar 16 10:45:16 mpouzol kernel: drop_monitor: Initializing network drop monitor service
+Mar 16 10:45:16 mpouzol kernel: Initializing XFRM netlink socket
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_INET6 protocol family
+Mar 16 10:45:16 mpouzol kernel: Segment Routing with IPv6
+Mar 16 10:45:16 mpouzol kernel: RPL Segment Routing with IPv6
+Mar 16 10:45:16 mpouzol kernel: In-situ OAM (IOAM) with IPv6
+Mar 16 10:45:16 mpouzol kernel: NET: Registered PF_PACKET protocol family
+Mar 16 10:45:16 mpouzol kernel: IPI shorthand broadcast: enabled
+Mar 16 10:45:16 mpouzol kernel: sched_clock: Marking stable (716632575, 2164023)->(754716782, -35920184)
+Mar 16 10:45:16 mpouzol kernel: registered taskstats version 1
+Mar 16 10:45:16 mpouzol kernel: Loading compiled-in X.509 certificates
+Mar 16 10:45:16 mpouzol kernel: Loaded X.509 cert 'Build time autogenerated kernel key: 6c74e3f7eba9305ecb2bc9d8ecfe66b23ca875eb'
+Mar 16 10:45:16 mpouzol kernel: zswap: loaded using pool lz4/z3fold
+Mar 16 10:45:16 mpouzol kernel: Key type ._fscrypt registered
+Mar 16 10:45:16 mpouzol kernel: Key type .fscrypt registered
+Mar 16 10:45:16 mpouzol kernel: Key type fscrypt-provisioning registered
+Mar 16 10:45:16 mpouzol kernel: PM:   Magic number: 14:478:780
+Mar 16 10:45:16 mpouzol kernel: PM:   hash matches drivers/base/power/main.c:1724
+Mar 16 10:45:16 mpouzol kernel: RAS: Correctable Errors collector initialized.
+Mar 16 10:45:16 mpouzol kernel: ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Mar 16 10:45:16 mpouzol kernel: ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Mar 16 10:45:16 mpouzol kernel: ata1.00: 80758080 sectors, multi 128: LBA48 NCQ (depth 32)
+Mar 16 10:45:16 mpouzol kernel: ata1.00: configured for UDMA/133
+Mar 16 10:45:16 mpouzol kernel: scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Mar 16 10:45:16 mpouzol kernel: sd 0:0:0:0: [sda] 80758080 512-byte logical blocks: (41.3 GB/38.5 GiB)
+Mar 16 10:45:16 mpouzol kernel: sd 0:0:0:0: [sda] Write Protect is off
+Mar 16 10:45:16 mpouzol kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Mar 16 10:45:16 mpouzol kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Mar 16 10:45:16 mpouzol kernel:  sda: sda1 sda2
+Mar 16 10:45:16 mpouzol kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Mar 16 10:45:16 mpouzol kernel: Freeing unused decrypted memory: 2036K
+Mar 16 10:45:16 mpouzol kernel: Freeing unused kernel image (initmem) memory: 1784K
+Mar 16 10:45:16 mpouzol kernel: Write protecting the kernel read-only data: 24576k
+Mar 16 10:45:16 mpouzol kernel: Freeing unused kernel image (text/rodata gap) memory: 2040K
+Mar 16 10:45:16 mpouzol kernel: Freeing unused kernel image (rodata/data gap) memory: 1900K
+Mar 16 10:45:16 mpouzol kernel: usb 2-1: new full-speed USB device number 2 using ohci-pci
+Mar 16 10:45:16 mpouzol kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Mar 16 10:45:16 mpouzol kernel: rodata_test: all tests were successful
+Mar 16 10:45:16 mpouzol kernel: x86/mm: Checking user space page tables
+Mar 16 10:45:16 mpouzol kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Mar 16 10:45:16 mpouzol kernel: Run /init as init process
+Mar 16 10:45:16 mpouzol kernel:   with arguments:
+Mar 16 10:45:16 mpouzol kernel:     /init
+Mar 16 10:45:16 mpouzol kernel:   with environment:
+Mar 16 10:45:16 mpouzol kernel:     HOME=/
+Mar 16 10:45:16 mpouzol kernel:     TERM=linux
+Mar 16 10:45:16 mpouzol kernel:     BOOT_IMAGE=/boot/vmlinuz-thor_kernel-5.17.0-mpouzol
+Mar 16 10:45:16 mpouzol kernel: fbcon: Taking over console
+Mar 16 10:45:16 mpouzol kernel: Console: switching to colour frame buffer device 80x30
+Mar 16 10:45:16 mpouzol kernel: video: module verification failed: signature and/or required key missing - tainting kernel
+Mar 16 10:45:16 mpouzol kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Mar 16 10:45:16 mpouzol kernel: input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+Mar 16 10:45:16 mpouzol kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Mar 16 10:45:16 mpouzol kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Mar 16 10:45:16 mpouzol kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Mar 16 10:45:16 mpouzol kernel: ata_piix 0000:00:01.1: version 2.13
+Mar 16 10:45:16 mpouzol kernel: vboxguest: host-version: 6.1.2r135662 0x8000000f
+Mar 16 10:45:16 mpouzol kernel: vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+Mar 16 10:45:16 mpouzol kernel: input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input3
+Mar 16 10:45:16 mpouzol kernel: scsi host1: ata_piix
+Mar 16 10:45:16 mpouzol kernel: vboxguest: misc device minor 124, IRQ 20, I/O port d040, MMIO at 0x00000000f1400000 (size 0x0000000000400000)
+Mar 16 10:45:16 mpouzol kernel: scsi host2: ata_piix
+Mar 16 10:45:16 mpouzol kernel: ata2: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Mar 16 10:45:16 mpouzol kernel: ata3: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Mar 16 10:45:16 mpouzol kernel: cryptd: max_cpu_qlen set to 1000
+Mar 16 10:45:16 mpouzol kernel: usb 2-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Mar 16 10:45:16 mpouzol kernel: usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Mar 16 10:45:16 mpouzol kernel: usb 2-1: Product: USB Tablet
+Mar 16 10:45:16 mpouzol kernel: usb 2-1: Manufacturer: VirtualBox
+Mar 16 10:45:16 mpouzol kernel: input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:80EE:0021.0001/input/input4
+Mar 16 10:45:16 mpouzol kernel: hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Mar 16 10:45:16 mpouzol kernel: usbcore: registered new interface driver usbhid
+Mar 16 10:45:16 mpouzol kernel: usbhid: USB HID core driver
+Mar 16 10:45:16 mpouzol kernel: ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Mar 16 10:45:16 mpouzol kernel: scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Mar 16 10:45:16 mpouzol kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input5
+Mar 16 10:45:16 mpouzol kernel: AVX2 version of gcm_enc/dec engaged.
+Mar 16 10:45:16 mpouzol kernel: AES CTR mode by8 optimization enabled
+Mar 16 10:45:16 mpouzol kernel: sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Mar 16 10:45:16 mpouzol kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Mar 16 10:45:16 mpouzol kernel: sr 2:0:0:0: Attached scsi CD-ROM sr0
+Mar 16 10:45:16 mpouzol kernel: random: fast init done
+Mar 16 10:45:16 mpouzol kernel: EXT4-fs (sda2): mounted filesystem with ordered data mode. Quota mode: none.
+Mar 16 10:45:16 mpouzol systemd[1]: systemd 250.4-1-arch running in system mode (+PAM +AUDIT -SELINUX -APPARMOR -IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK +XKBCOMMON +UTMP -SYSVINIT default-hierarchy=unified)
+Mar 16 10:45:16 mpouzol systemd[1]: Detected virtualization oracle.
+Mar 16 10:45:16 mpouzol systemd[1]: Detected architecture x86-64.
+Mar 16 10:45:16 mpouzol systemd[1]: Hostname set to <mpouzol>.
+Mar 16 10:45:16 mpouzol systemd-fstab-generator[223]: Failed to create unit file /run/systemd/generator/-.mount, as it already exists. Duplicate entry in /etc/fstab?
+Mar 16 10:45:16 mpouzol systemd-fstab-generator[223]: Failed to create unit file /run/systemd/generator/-.mount, as it already exists. Duplicate entry in /etc/fstab?
+Mar 16 10:45:16 mpouzol systemd-fstab-generator[223]: Failed to create unit file /run/systemd/generator/-.mount, as it already exists. Duplicate entry in /etc/fstab?
+Mar 16 10:45:16 mpouzol systemd[219]: /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1.
+Mar 16 10:45:16 mpouzol systemd[1]: Queued start job for default target Graphical Interface.
+Mar 16 10:45:16 mpouzol systemd[1]: Created slice Slice /system/getty.
+Mar 16 10:45:16 mpouzol systemd[1]: Created slice Slice /system/modprobe.
+Mar 16 10:45:16 mpouzol systemd[1]: Created slice User and Session Slice.
+Mar 16 10:45:16 mpouzol systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+Mar 16 10:45:16 mpouzol systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Mar 16 10:45:16 mpouzol systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Local Encrypted Volumes.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Login Prompts.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Local Integrity Protected Volumes.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Path Units.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Remote File Systems.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Slice Units.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Swaps.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Local Verity Protected Volumes.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on Device-mapper event daemon FIFOs.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on LVM2 poll daemon socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on Process Core Dump Socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on Journal Audit Socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on Journal Socket (/dev/log).
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on Journal Socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on udev Control Socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on udev Kernel Socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting Huge Pages File System...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting POSIX Message Queue File System...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting Kernel Debug File System...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting Kernel Trace File System...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting Temporary Directory /tmp...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Create List of Static Device Nodes...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Load Kernel Module configfs...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Load Kernel Module drm...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Load Kernel Module fuse...
+Mar 16 10:45:16 mpouzol systemd[1]: File System Check on Root Device was skipped because of a failed condition check (ConditionPathIsReadWrite=!/).
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Journal Service...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Load Kernel Modules...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Remount Root and Kernel File Systems...
+Mar 16 10:45:16 mpouzol systemd[1]: Repartition Root Disk was skipped because all trigger condition checks failed.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Coldplug All udev Devices...
+Mar 16 10:45:16 mpouzol kernel: fuse: init (API version 7.36)
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted Huge Pages File System.
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted POSIX Message Queue File System.
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted Kernel Debug File System.
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted Kernel Trace File System.
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted Temporary Directory /tmp.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Create List of Static Device Nodes.
+Mar 16 10:45:16 mpouzol systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Load Kernel Module configfs.
+Mar 16 10:45:16 mpouzol systemd[1]: modprobe@drm.service: Deactivated successfully.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Load Kernel Module drm.
+Mar 16 10:45:16 mpouzol systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Load Kernel Module fuse.
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting FUSE Control File System...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounting Kernel Configuration File System...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted FUSE Control File System.
+Mar 16 10:45:16 mpouzol kernel: EXT4-fs (sda2): re-mounted. Quota mode: none.
+Mar 16 10:45:16 mpouzol kernel: EXT4-fs (sda2): re-mounted. Quota mode: none.
+Mar 16 10:45:16 mpouzol kernel: EXT4-fs (sda2): re-mounted. Quota mode: none.
+Mar 16 10:45:16 mpouzol kernel: EXT4-fs (sda2): re-mounted. Quota mode: none.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Remount Root and Kernel File Systems.
+Mar 16 10:45:16 mpouzol systemd[1]: First Boot Wizard was skipped because of a failed condition check (ConditionFirstBoot=yes).
+Mar 16 10:45:16 mpouzol systemd[1]: Rebuild Hardware Database was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Load/Save Random Seed...
+Mar 16 10:45:16 mpouzol systemd[1]: Create System Users was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Create Static Device Nodes in /dev...
+Mar 16 10:45:16 mpouzol systemd[1]: Mounted Kernel Configuration File System.
+Mar 16 10:45:16 mpouzol kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Mar 16 10:45:16 mpouzol kernel: sr 2:0:0:0: Attached scsi generic sg1 type 5
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Load Kernel Modules.
+Mar 16 10:45:16 mpouzol kernel: audit: type=1130 audit(1647427516.113:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Apply Kernel Variables...
+Mar 16 10:45:16 mpouzol kernel: random: lvm: uninitialized urandom read (4 bytes read)
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Apply Kernel Variables.
+Mar 16 10:45:16 mpouzol kernel: audit: type=1130 audit(1647427516.130:3): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd-journald[241]: Journal started
+Mar 16 10:45:16 mpouzol systemd-journald[241]: Runtime Journal (/run/log/journal/3b149d3eb7cc4afeb64aad0d36b952cf) is 8.0M, max 412.7M, 404.7M free.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd-modules-load[242]: Inserted module 'crypto_user'
+Mar 16 10:45:16 mpouzol systemd-modules-load[242]: Inserted module 'sg'
+Mar 16 10:45:16 mpouzol systemd-random-seed[253]: Kernel entropy pool is not initialized yet, waiting until it is.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Flush Journal to Persistent Storage...
+Mar 16 10:45:16 mpouzol systemd[1]: Started Journal Service.
+Mar 16 10:45:16 mpouzol kernel: audit: type=1130 audit(1647427516.136:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd-journald[241]: Time spent on flushing to /var/log/journal/3b149d3eb7cc4afeb64aad0d36b952cf is 10.887ms for 596 entries.
+Mar 16 10:45:16 mpouzol systemd-journald[241]: System Journal (/var/log/journal/3b149d3eb7cc4afeb64aad0d36b952cf) is 224.1M, max 3.7G, 3.4G free.
+Mar 16 10:45:16 mpouzol systemd-journald[241]: Received client request to flush runtime journal.
+Mar 16 10:45:16 mpouzol systemd-journald[241]: File /var/log/journal/3b149d3eb7cc4afeb64aad0d36b952cf/system.journal corrupted or uncleanly shut down, renaming and replacing.
+Mar 16 10:45:16 mpouzol kernel: audit: type=1130 audit(1647427516.156:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol kernel: audit: type=1334 audit(1647427516.156:6): prog-id=7 op=LOAD
+Mar 16 10:45:16 mpouzol kernel: audit: type=1334 audit(1647427516.156:7): prog-id=8 op=LOAD
+Mar 16 10:45:16 mpouzol kernel: audit: type=1334 audit(1647427516.156:8): prog-id=9 op=LOAD
+Mar 16 10:45:16 mpouzol kernel: audit: type=1130 audit(1647427516.170:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol kernel: audit: type=1130 audit(1647427516.180:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=7 op=LOAD
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=8 op=LOAD
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=9 op=LOAD
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Create Static Device Nodes in /dev.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Rule-based Manager for Device Events and Files...
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Preparation for Local File Systems.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journal-flush comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Virtual Machine and Container Storage (Compatibility) was skipped because of a failed condition check (ConditionPathExists=/var/lib/machines.raw).
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Local File Systems.
+Mar 16 10:45:16 mpouzol systemd[1]: Rebuild Dynamic Linker Cache was skipped because all trigger condition checks failed.
+Mar 16 10:45:16 mpouzol systemd[1]: Set Up Additional Binary Formats was skipped because all trigger condition checks failed.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Coldplug All udev Devices.
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Flush Journal to Persistent Storage.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Create Volatile Files and Directories...
+Mar 16 10:45:16 mpouzol systemd[1]: Started Rule-based Manager for Device Events and Files.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Create Volatile Files and Directories.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Rebuild Journal Catalog was skipped because of a failed condition check (ConditionNeedsUpdate=/var).
+Mar 16 10:45:16 mpouzol systemd[1]: Update is Completed was skipped because all trigger condition checks failed.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Record System Boot/Shutdown in UTMP...
+Mar 16 10:45:16 mpouzol audit[285]: SYSTEM_BOOT pid=285 uid=0 auid=4294967295 ses=4294967295 msg=' comm="systemd-update-utmp" exe="/usr/lib/systemd/systemd-update-utmp" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Record System Boot/Shutdown in UTMP.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-update-utmp comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target System Initialization.
+Mar 16 10:45:16 mpouzol systemd[1]: Started Daily man-db regeneration.
+Mar 16 10:45:16 mpouzol systemd[1]: Started Daily verification of password and group files.
+Mar 16 10:45:16 mpouzol systemd[1]: Started Daily Cleanup of Temporary Directories.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Timer Units.
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on D-Bus System Message Bus Socket.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Socket Units.
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Basic System.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting D-Bus System Message Bus...
+Mar 16 10:45:16 mpouzol systemd[1]: Starting dhcpcd on all interfaces...
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=10 op=LOAD
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=11 op=LOAD
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=12 op=LOAD
+Mar 16 10:45:16 mpouzol systemd[1]: Starting User Login Management...
+Mar 16 10:45:16 mpouzol dhcpcd[287]: dhcpcd-9.4.1 starting
+Mar 16 10:45:16 mpouzol dhcpcd[291]: dev: loaded udev
+Mar 16 10:45:16 mpouzol kernel: random: dhcpcd: uninitialized urandom read (112 bytes read)
+Mar 16 10:45:16 mpouzol kernel: random: dbus-daemon: uninitialized urandom read (12 bytes read)
+Mar 16 10:45:16 mpouzol dhcpcd[291]: DUID 00:04:db:b7:38:4b:9e:1c:79:41:b5:48:3e:d4:76:06:72:b4
+Mar 16 10:45:16 mpouzol dhcpcd[291]: no valid interfaces found
+Mar 16 10:45:16 mpouzol systemd[1]: Started dhcpcd on all interfaces.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dhcpcd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Network.
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Permit User Sessions...
+Mar 16 10:45:16 mpouzol systemd[1]: Finished Permit User Sessions.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-user-sessions comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Starting GNOME Display Manager...
+Mar 16 10:45:16 mpouzol systemd[1]: Started D-Bus System Message Bus.
+Mar 16 10:45:16 mpouzol systemd-logind[288]: New seat seat0.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dbus comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.systemd1'
+Mar 16 10:45:16 mpouzol systemd[1]: Started User Login Management.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-logind comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Multi-User System.
+Mar 16 10:45:16 mpouzol systemd[1]: Started GNOME Display Manager.
+Mar 16 10:45:16 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=gdm comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target Graphical Interface.
+Mar 16 10:45:16 mpouzol kernel: piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+Mar 16 10:45:16 mpouzol kernel: e1000: Intel(R) PRO/1000 Network Driver
+Mar 16 10:45:16 mpouzol kernel: e1000: Copyright (c) 1999-2006 Intel Corporation.
+Mar 16 10:45:16 mpouzol kernel: input: PC Speaker as /devices/platform/pcspkr/input/input7
+Mar 16 10:45:16 mpouzol kernel: checking generic (f0000000 130000) vs hw (f0000000 1000000)
+Mar 16 10:45:16 mpouzol kernel: fb0: switching to vmwgfx from VESA VGA
+Mar 16 10:45:16 mpouzol kernel: Console: switching to colour dummy device 80x25
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] FIFO at 0x00000000f1000000 size is 2048 kiB
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] VRAM at 0x00000000f0000000 size is 16384 kiB
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Running on SVGA version 2.
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] DMA map mode: Caching DMA mappings.
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Legacy memory limits: VRAM = 16384 kB, FIFO = 2048 kB, surface = 507904 kB
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] MOB limits: max mob size = 0 kB, max mob pages = 0
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Capabilities: cursor, cursor bypass 2, alpha cursor, 3D, extended fifo, pitchlock, irq mask, gmr, traces, gmr2, screen object 2, 
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Max GMR ids is 8192
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Max number of GMR pages is 1048576
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Maximum display memory size is 16384 kiB
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Screen Object display unit initialized
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+Mar 16 10:45:16 mpouzol kernel: vmwgfx 0000:00:02.0: [drm] Available shader model: Legacy.
+Mar 16 10:45:16 mpouzol kernel: [drm:vmw_host_printf [vmwgfx]] *ERROR* Failed to send host log message.
+Mar 16 10:45:16 mpouzol kernel: fbcon: svgadrmfb (fb0) is primary device
+Mar 16 10:45:16 mpouzol kernel: Console: switching to colour frame buffer device 100x37
+Mar 16 10:45:16 mpouzol kernel: [drm] Initialized vmwgfx 2.20.0 20211206 for 0000:00:02.0 on minor 0
+Mar 16 10:45:16 mpouzol mtp-probe[308]: checking bus 2, device 2: "/sys/devices/pci0000:00/0000:00:06.0/usb2/2-1"
+Mar 16 10:45:16 mpouzol systemd-logind[288]: Watching system buttons on /dev/input/event0 (Power Button)
+Mar 16 10:45:16 mpouzol mtp-probe[308]: bus: 2, device: 2 was not an MTP device
+Mar 16 10:45:16 mpouzol systemd-logind[288]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Mar 16 10:45:16 mpouzol kernel: mousedev: PS/2 mouse device common for all mice
+Mar 16 10:45:16 mpouzol systemd-logind[288]: Watching system buttons on /dev/input/event5 (AT Translated Set 2 keyboard)
+Mar 16 10:45:16 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.Accounts' unit='accounts-daemon.service' requested by ':1.2' (uid=0 pid=295 comm="/usr/bin/gdm")
+Mar 16 10:45:16 mpouzol systemd[1]: Reached target User and Group Name Lookups.
+Mar 16 10:45:16 mpouzol audit: BPF prog-id=13 op=LOAD
+Mar 16 10:45:16 mpouzol kernel: 8021q: 802.1Q VLAN Support v1.8
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Accounts Service...
+Mar 16 10:45:16 mpouzol kernel: RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Mar 16 10:45:16 mpouzol kernel: input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input8
+Mar 16 10:45:16 mpouzol systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Mar 16 10:45:16 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.3' (uid=0 pid=324 comm="/usr/lib/accounts-daemon")
+Mar 16 10:45:16 mpouzol systemd[1]: Starting Authorization Manager...
+Mar 16 10:45:16 mpouzol polkitd[333]: Started polkitd version 0.120
+Mar 16 10:45:16 mpouzol kernel: e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:31:ad:ba
+Mar 16 10:45:16 mpouzol kernel: e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Mar 16 10:45:17 mpouzol kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Mar 16 10:45:17 mpouzol systemd-udevd[277]: Using default interface naming scheme 'v250'.
+Mar 16 10:45:17 mpouzol kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+Mar 16 10:45:17 mpouzol kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Mar 16 10:45:17 mpouzol systemd-udevd[284]: Using default interface naming scheme 'v250'.
+Mar 16 10:45:17 mpouzol kernel: platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Mar 16 10:45:17 mpouzol kernel: cfg80211: failed to load regulatory.db
+Mar 16 10:45:17 mpouzol kernel: snd_intel8x0 0000:00:05.0: allow list rate for 1028:0177 is 48000
+Mar 16 10:45:17 mpouzol polkitd[333]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 10:45:17 mpouzol polkitd[333]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 10:45:17 mpouzol polkitd[333]: Finished loading, compiling and executing 8 rules
+Mar 16 10:45:17 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Mar 16 10:45:17 mpouzol systemd[1]: Started Authorization Manager.
+Mar 16 10:45:17 mpouzol polkitd[333]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 16 10:45:17 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=polkit comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol accounts-daemon[324]: started daemon version 22.08.0
+Mar 16 10:45:17 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.Accounts'
+Mar 16 10:45:17 mpouzol systemd[1]: Started Accounts Service.
+Mar 16 10:45:17 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=accounts-daemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol dhcpcd[291]: enp0s3: waiting for carrier
+Mar 16 10:45:17 mpouzol kernel: 8021q: adding VLAN 0 to HW filter on device enp0s3
+Mar 16 10:45:17 mpouzol dhcpcd[291]: enp0s3: waiting for carrier
+Mar 16 10:45:17 mpouzol audit[353]: USER_AUTH pid=353 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_succeed_if,pam_permit acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:17 mpouzol audit[353]: USER_ACCT pid=353 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_succeed_if,pam_permit acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:17 mpouzol systemd[1]: Reached target Sound Card.
+Mar 16 10:45:17 mpouzol audit[353]: CRED_ACQ pid=353 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:17 mpouzol audit[353]: SYSCALL arch=c000003e syscall=1 success=yes exit=3 a0=8 a1=7ffd84f926e0 a2=3 a3=0 items=0 ppid=295 pid=353 auid=120 uid=0 gid=120 euid=0 suid=0 fsuid=0 egid=120 sgid=120 fsgid=120 tty=(none) ses=1 comm="gdm-session-wor" exe="/usr/lib/gdm-session-worker" key=(null)
+Mar 16 10:45:17 mpouzol audit: PROCTITLE proctitle=67646D2D73657373696F6E2D776F726B6572205B70616D2F67646D2D6C61756E63682D656E7669726F6E6D656E745D
+Mar 16 10:45:17 mpouzol systemd[1]: Created slice User Slice of UID 120.
+Mar 16 10:45:17 mpouzol systemd[1]: Starting User Runtime Directory /run/user/120...
+Mar 16 10:45:17 mpouzol systemd-logind[288]: New session 1 of user gdm.
+Mar 16 10:45:17 mpouzol systemd[1]: Finished User Runtime Directory /run/user/120.
+Mar 16 10:45:17 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@120 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol kernel: random: crng init done
+Mar 16 10:45:17 mpouzol kernel: random: 7 urandom warning(s) missed due to ratelimiting
+Mar 16 10:45:17 mpouzol systemd[1]: Starting User Manager for UID 120...
+Mar 16 10:45:17 mpouzol systemd[1]: Finished Load/Save Random Seed.
+Mar 16 10:45:17 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol systemd[1]: First Boot Complete was skipped because of a failed condition check (ConditionFirstBoot=yes).
+Mar 16 10:45:17 mpouzol systemd[1]: Store a System Token in an EFI Variable was skipped because of a failed condition check (ConditionPathExists=/sys/firmware/efi/efivars/LoaderFeatures-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Mar 16 10:45:17 mpouzol systemd[1]: Commit a transient machine-id on disk was skipped because of a failed condition check (ConditionPathIsMountPoint=/etc/machine-id).
+Mar 16 10:45:17 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.7' (uid=0 pid=359 comm="(systemd)")
+Mar 16 10:45:17 mpouzol dbus-daemon[286]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Mar 16 10:45:17 mpouzol systemd[359]: pam_systemd_home(systemd-user:account): systemd-homed is not available: Unit dbus-org.freedesktop.home1.service not found.
+Mar 16 10:45:17 mpouzol audit[359]: USER_ACCT pid=359 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="gdm" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol systemd[359]: pam_warn(systemd-user:setcred): function=[pam_sm_setcred] flags=0x8002 service=[systemd-user] terminal=[] user=[gdm] ruser=[<unknown>] rhost=[<unknown>]
+Mar 16 10:45:17 mpouzol audit[359]: CRED_ACQ pid=359 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="gdm" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+Mar 16 10:45:17 mpouzol audit[359]: SYSCALL arch=c000003e syscall=1 success=yes exit=3 a0=9 a1=7fffeea8a5b0 a2=3 a3=0 items=0 ppid=1 pid=359 auid=120 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2 comm="(systemd)" exe="/usr/lib/systemd/systemd" key=(null)
+Mar 16 10:45:17 mpouzol audit: PROCTITLE proctitle="(systemd)"
+Mar 16 10:45:17 mpouzol systemd[359]: pam_unix(systemd-user:session): session opened for user gdm(uid=120) by (uid=0)
+Mar 16 10:45:17 mpouzol systemd[359]: pam_env(systemd-user:session): deprecated reading of user environment enabled
+Mar 16 10:45:17 mpouzol audit[359]: USER_START pid=359 uid=0 auid=120 ses=2 msg='op=PAM:session_open grantors=pam_loginuid,pam_loginuid,pam_keyinit,pam_systemd_home,pam_limits,pam_unix,pam_permit,pam_mail,pam_systemd,pam_env acct="gdm" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol audit: BPF prog-id=14 op=LOAD
+Mar 16 10:45:17 mpouzol audit[359]: SYSCALL arch=c000003e syscall=321 success=yes exit=8 a0=5 a1=7fffac7d6b40 a2=78 a3=7fffac7d6b40 items=0 ppid=1 pid=359 auid=120 uid=120 gid=120 euid=120 suid=120 fsuid=120 egid=120 sgid=120 fsgid=120 tty=(none) ses=2 comm="systemd" exe="/usr/lib/systemd/systemd" key=(null)
+Mar 16 10:45:17 mpouzol audit: PROCTITLE proctitle=2F7573722F6C69622F73797374656D642F73797374656D64002D2D75736572
+Mar 16 10:45:17 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:17 mpouzol systemd[359]: Queued start job for default target Main User Target.
+Mar 16 10:45:17 mpouzol systemd[359]: Created slice User Application Slice.
+Mar 16 10:45:17 mpouzol systemd[359]: Reached target Paths.
+Mar 16 10:45:17 mpouzol systemd[359]: Reached target Timers.
+Mar 16 10:45:17 mpouzol systemd[359]: Starting D-Bus User Message Bus Socket...
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on GnuPG network certificate management daemon.
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on GCR ssh-agent wrapper.
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on GnuPG cryptographic agent and passphrase cache.
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on p11-kit server.
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on PipeWire Multimedia System Socket.
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on Sound System.
+Mar 16 10:45:17 mpouzol systemd[359]: Listening on D-Bus User Message Bus Socket.
+Mar 16 10:45:17 mpouzol systemd[359]: Reached target Sockets.
+Mar 16 10:45:17 mpouzol systemd[359]: Reached target Basic System.
+Mar 16 10:45:17 mpouzol systemd[1]: Started User Manager for UID 120.
+Mar 16 10:45:17 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user@120 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:17 mpouzol systemd[1]: Started Session 1 of User gdm.
+Mar 16 10:45:17 mpouzol systemd[1]: Startup finished in 2.062s (kernel) + 2.144s (userspace) = 4.207s.
+Mar 16 10:45:17 mpouzol systemd[359]: Starting Update XDG user dir configuration...
+Mar 16 10:45:17 mpouzol systemd[359]: Finished Update XDG user dir configuration.
+Mar 16 10:45:17 mpouzol systemd[359]: Reached target Main User Target.
+Mar 16 10:45:17 mpouzol systemd[359]: Startup finished in 169ms.
+Mar 16 10:45:18 mpouzol gdm-launch-environment][353]: pam_env(gdm-launch-environment:session): deprecated reading of user environment enabled
+Mar 16 10:45:18 mpouzol audit[353]: USER_START pid=353 uid=0 auid=120 ses=1 msg='op=PAM:session_open grantors=pam_loginuid,pam_keyinit,pam_succeed_if,pam_permit,pam_systemd,pam_env acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:18 mpouzol systemd[359]: Created slice User Core Session Slice.
+Mar 16 10:45:18 mpouzol systemd[359]: Starting D-Bus User Message Bus...
+Mar 16 10:45:18 mpouzol systemd[359]: Started D-Bus User Message Bus.
+Mar 16 10:45:18 mpouzol dbus-daemon[369]: [session uid=120 pid=369] Successfully activated service 'org.freedesktop.systemd1'
+Mar 16 10:45:18 mpouzol gnome-session[373]: gnome-session-binary[373]: GLib-GIO-CRITICAL: g_bus_get_sync: assertion 'error == NULL || *error == NULL' failed
+Mar 16 10:45:18 mpouzol gnome-session[373]: gnome-session-binary[373]: GLib-GIO-CRITICAL: g_bus_get_sync: assertion 'error == NULL || *error == NULL' failed
+Mar 16 10:45:18 mpouzol gnome-session-binary[373]: GLib-GIO-CRITICAL: g_bus_get_sync: assertion 'error == NULL || *error == NULL' failed
+Mar 16 10:45:18 mpouzol gnome-session-binary[373]: GLib-GIO-CRITICAL: g_bus_get_sync: assertion 'error == NULL || *error == NULL' failed
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Running GNOME Shell (using mutter 41.4) as a Wayland display server
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Added device '/dev/dri/card0' (vmwgfx) using non-atomic mode setting.
+Mar 16 10:45:18 mpouzol org.gnome.Shell.desktop[381]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Do not want to use software renderer (llvmpipe (LLVM 13.0.1, 256 bits)), falling back to CPU copy path
+Mar 16 10:45:18 mpouzol org.gnome.Shell.desktop[381]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:18 mpouzol org.gnome.Shell.desktop[381]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:18 mpouzol org.gnome.Shell.desktop[381]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:18 mpouzol org.gnome.Shell.desktop[381]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Created gbm renderer for '/dev/dri/card0'
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Boot VGA GPU /dev/dri/card0 selected as primary
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Disabling DMA buffer screen sharing for driver 'vmwgfx'.
+Mar 16 10:45:18 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Activating service name='org.a11y.Bus' requested by ':1.4' (uid=120 pid=381 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:18 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Successfully activated service 'org.a11y.Bus'
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Using public X11 display :1024, (using :1025 for managed services)
+Mar 16 10:45:18 mpouzol gnome-shell[381]: Using Wayland display name 'wayland-0'
+Mar 16 10:45:19 mpouzol org.gnome.Shell.desktop[410]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:19 mpouzol org.gnome.Shell.desktop[410]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:19 mpouzol org.gnome.Shell.desktop[410]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:19 mpouzol org.gnome.Shell.desktop[410]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:19 mpouzol gnome-shell[381]: Skipping parental controls support as it’s disabled
+Mar 16 10:45:19 mpouzol gnome-shell[381]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+Mar 16 10:45:19 mpouzol gnome-shell[381]: Will monitor session 1
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.locale1' unit='dbus-org.freedesktop.locale1.service' requested by ':1.11' (uid=120 pid=381 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=15 op=LOAD
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=16 op=LOAD
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=17 op=LOAD
+Mar 16 10:45:19 mpouzol kernel: kauditd_printk_skb: 36 callbacks suppressed
+Mar 16 10:45:19 mpouzol kernel: audit: type=1334 audit(1647427519.410:41): prog-id=15 op=LOAD
+Mar 16 10:45:19 mpouzol kernel: audit: type=1334 audit(1647427519.410:42): prog-id=16 op=LOAD
+Mar 16 10:45:19 mpouzol kernel: audit: type=1334 audit(1647427519.410:43): prog-id=17 op=LOAD
+Mar 16 10:45:19 mpouzol systemd[1]: Starting Locale Service...
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.locale1'
+Mar 16 10:45:19 mpouzol systemd[1]: Started Locale Service.
+Mar 16 10:45:19 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol kernel: audit: type=1130 audit(1647427519.463:44): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol gnome-shell[381]: Failed to launch ibus-daemon: Failed to execute child process “ibus-daemon” (No such file or directory)
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.UPower' unit='upower.service' requested by ':1.11' (uid=120 pid=381 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=18 op=LOAD
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=19 op=LOAD
+Mar 16 10:45:19 mpouzol kernel: audit: type=1334 audit(1647427519.603:45): prog-id=18 op=LOAD
+Mar 16 10:45:19 mpouzol kernel: audit: type=1334 audit(1647427519.603:46): prog-id=19 op=LOAD
+Mar 16 10:45:19 mpouzol systemd[1]: Starting Daemon for power management...
+Mar 16 10:45:19 mpouzol systemd[359]: Starting Sound Service...
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.RealtimeKit1' unit='rtkit-daemon.service' requested by ':1.14' (uid=120 pid=415 comm="/usr/bin/pulseaudio --daemonize=no --log-target=jo")
+Mar 16 10:45:19 mpouzol systemd[1]: Starting RealtimeKit Scheduling Policy Service...
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.RealtimeKit1'
+Mar 16 10:45:19 mpouzol systemd[1]: Started RealtimeKit Scheduling Policy Service.
+Mar 16 10:45:19 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=rtkit-daemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Successfully called chroot.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Successfully dropped privileges.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Successfully limited resources.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Canary thread running.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Watchdog thread running.
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.GeoClue2' unit='geoclue.service' requested by ':1.11' (uid=120 pid=381 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Running.
+Mar 16 10:45:19 mpouzol kernel: audit: type=1130 audit(1647427519.676:47): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=rtkit-daemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol systemd[1]: Starting Location Lookup Service...
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.UPower'
+Mar 16 10:45:19 mpouzol systemd[1]: Started Daemon for power management.
+Mar 16 10:45:19 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=upower comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol kernel: audit: type=1130 audit(1647427519.693:48): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=upower comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Successfully made thread 415 of process 415 owned by '120' high priority at nice level -11.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Supervising 1 threads of 1 processes of 1 users.
+Mar 16 10:45:19 mpouzol polkitd[333]: Registered Authentication Agent for unix-session:1 (system bus name :1.11 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C)
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Activating service name='org.gnome.Shell.Notifications' requested by ':1.3' (uid=120 pid=381 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[404]: dbus-daemon[404]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=120 pid=381 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.17' (uid=966 pid=422 comm="/usr/lib/geoclue")
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Mar 16 10:45:19 mpouzol geoclue[422]: Failed to connect to avahi service: Daemon not running
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.GeoClue2'
+Mar 16 10:45:19 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol systemd[1]: Started Location Lookup Service.
+Mar 16 10:45:19 mpouzol kernel: audit: type=1130 audit(1647427519.773:49): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[404]: dbus-daemon[404]: Successfully activated service 'org.a11y.atspi.Registry'
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[430]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:19 mpouzol dhcpcd[291]: enp0s3: carrier acquired
+Mar 16 10:45:19 mpouzol kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Mar 16 10:45:19 mpouzol kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Mar 16 10:45:19 mpouzol pulseaudio[415]: Disabling timer-based scheduling because running inside a VM.
+Mar 16 10:45:19 mpouzol dhcpcd[291]: enp0s3: IAID 27:31:ad:ba
+Mar 16 10:45:19 mpouzol dhcpcd[291]: enp0s3: adding address fe80::ba83:ba08:e66d:f897
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Successfully activated service 'org.gnome.Shell.Notifications'
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Supervising 1 threads of 1 processes of 1 users.
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.19' (uid=120 pid=448 comm="/usr/lib/gsd-rfkill")
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=20 op=LOAD
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=21 op=LOAD
+Mar 16 10:45:19 mpouzol audit: BPF prog-id=22 op=LOAD
+Mar 16 10:45:19 mpouzol systemd[1]: Starting Hostname Service...
+Mar 16 10:45:19 mpouzol kernel: audit: type=1334 audit(1647427519.930:50): prog-id=20 op=LOAD
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Successfully made thread 489 of process 415 owned by '120' RT at priority 5.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Supervising 2 threads of 1 processes of 1 users.
+Mar 16 10:45:19 mpouzol pulseaudio[415]: Disabling timer-based scheduling because running inside a VM.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Supervising 2 threads of 1 processes of 1 users.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Successfully made thread 504 of process 415 owned by '120' RT at priority 5.
+Mar 16 10:45:19 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:19 mpouzol systemd[359]: Started Sound Service.
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Activating service name='org.freedesktop.systemd1' requested by ':1.8' (uid=120 pid=436 comm="/usr/lib/gsd-sharing")
+Mar 16 10:45:19 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Activated service 'org.freedesktop.systemd1' failed: Process org.freedesktop.systemd1 exited with status 1
+Mar 16 10:45:19 mpouzol gsd-sharing[436]: Failed to StopUnit service: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+Mar 16 10:45:19 mpouzol gsd-sharing[436]: Failed to StopUnit service: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+Mar 16 10:45:19 mpouzol gsd-sharing[436]: Failed to StopUnit service: GDBus.Error:org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+Mar 16 10:45:19 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Mar 16 10:45:19 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:19 mpouzol systemd[1]: Started Hostname Service.
+Mar 16 10:45:19 mpouzol kernel: rfkill: input handler disabled
+Mar 16 10:45:20 mpouzol gnome-shell[381]: No permission to control network connections: Polkit.Error: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[410]: Failed to initialize glamor, falling back to sw
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[532]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[532]: > Warning:          Could not resolve keysym XF86EmojiPicker
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[532]: Errors from xkbcomp are not fatal to the X server
+Mar 16 10:45:20 mpouzol gnome-shell[381]: Failed to launch ibus-daemon: Failed to execute child process “ibus-daemon” (No such file or directory)
+Mar 16 10:45:20 mpouzol gnome-shell[381]: ATK Bridge is disabled but a11y has already been enabled.
+Mar 16 10:45:20 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Activating service name='org.gnome.Shell.Screencast' requested by ':1.21' (uid=120 pid=465 comm="/usr/lib/gsd-media-keys")
+Mar 16 10:45:20 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.ColorManager' unit='colord.service' requested by ':1.29' (uid=120 pid=442 comm="/usr/lib/gsd-color")
+Mar 16 10:45:20 mpouzol gnome-session-binary[373]: Entering running state
+Mar 16 10:45:20 mpouzol systemd[1]: Starting Manage, Install and Generate Color Profiles...
+Mar 16 10:45:20 mpouzol xbrlapi.desktop[554]: openConnection: connect: No such file or directory
+Mar 16 10:45:20 mpouzol xbrlapi.desktop[554]: cannot connect to braille devices daemon brltty at :0
+Mar 16 10:45:20 mpouzol colord[555]: failed to get edid data: EDID length is too small
+Mar 16 10:45:20 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.ColorManager'
+Mar 16 10:45:20 mpouzol systemd[1]: Started Manage, Install and Generate Color Profiles.
+Mar 16 10:45:20 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=colord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:20 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Activating service name='org.gnome.ScreenSaver' requested by ':1.23' (uid=120 pid=481 comm="/usr/lib/gsd-power")
+Mar 16 10:45:20 mpouzol gsd-media-keys[465]: Failed to grab accelerator for keybinding settings:playback-repeat
+Mar 16 10:45:20 mpouzol gsd-media-keys[465]: Failed to grab accelerator for keybinding settings:hibernate
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[566]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[566]: > Warning:          Unsupported maximum keycode 708, clipping.
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[566]: >                   X11 cannot support keycodes above 255.
+Mar 16 10:45:20 mpouzol org.gnome.Shell.desktop[566]: Errors from xkbcomp are not fatal to the X server
+Mar 16 10:45:20 mpouzol gnome-shell[381]: Registering session with GDM
+Mar 16 10:45:20 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Successfully activated service 'org.gnome.ScreenSaver'
+Mar 16 10:45:20 mpouzol gsd-color[442]: failed to get edid: unable to get EDID for output
+Mar 16 10:45:20 mpouzol gsd-color[442]: unable to get EDID for xrandr-Virtual-1: unable to get EDID for output
+Mar 16 10:45:20 mpouzol /usr/lib/gdm-wayland-session[372]: dbus-daemon[372]: [session uid=120 pid=372] Successfully activated service 'org.gnome.Shell.Screencast'
+Mar 16 10:45:20 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.32' (uid=967 pid=569 comm="/usr/lib/colord-sane")
+Mar 16 10:45:20 mpouzol dbus-daemon[286]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Mar 16 10:45:20 mpouzol dhcpcd[291]: enp0s3: soliciting an IPv6 router
+Mar 16 10:45:21 mpouzol dhcpcd[291]: enp0s3: rebinding lease of 10.0.2.15
+Mar 16 10:45:21 mpouzol dhcpcd[291]: enp0s3: probing address 10.0.2.15/24
+Mar 16 10:45:21 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.34' (uid=0 pid=589 comm="gdm-session-worker [pam/gdm-password]")
+Mar 16 10:45:21 mpouzol dbus-daemon[286]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Mar 16 10:45:21 mpouzol gdm-password][589]: pam_systemd_home(gdm-password:auth): systemd-homed is not available: Unit dbus-org.freedesktop.home1.service not found.
+Mar 16 10:45:23 mpouzol gdm-password][589]: gkr-pam: unable to locate daemon control file
+Mar 16 10:45:23 mpouzol audit[589]: USER_AUTH pid=589 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_shells,pam_faillock,pam_permit,pam_faillock,pam_gnome_keyring acct="maxime" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:23 mpouzol gdm-password][589]: gkr-pam: stashed password to try later in open session
+Mar 16 10:45:23 mpouzol audit[589]: USER_ACCT pid=589 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="maxime" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:23 mpouzol audit[589]: CRED_ACQ pid=589 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_shells,pam_faillock,pam_permit,pam_faillock,pam_gnome_keyring acct="maxime" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:23 mpouzol audit[589]: SYSCALL arch=c000003e syscall=1 success=yes exit=4 a0=a a1=7ffe0a06fd20 a2=4 a3=0 items=0 ppid=295 pid=589 auid=1001 uid=0 gid=1001 euid=0 suid=0 fsuid=0 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=3 comm="gdm-session-wor" exe="/usr/lib/gdm-session-worker" key=(null)
+Mar 16 10:45:23 mpouzol audit: PROCTITLE proctitle=67646D2D73657373696F6E2D776F726B6572205B70616D2F67646D2D70617373776F72645D
+Mar 16 10:45:23 mpouzol gdm-password][589]: pam_unix(gdm-password:session): session opened for user maxime(uid=1001) by (uid=0)
+Mar 16 10:45:23 mpouzol systemd[1]: Created slice User Slice of UID 1001.
+Mar 16 10:45:23 mpouzol systemd[1]: Starting User Runtime Directory /run/user/1001...
+Mar 16 10:45:23 mpouzol systemd-logind[288]: New session 3 of user maxime.
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@1001 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:23 mpouzol systemd[1]: Finished User Runtime Directory /run/user/1001.
+Mar 16 10:45:23 mpouzol systemd[1]: Starting User Manager for UID 1001...
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.36' (uid=0 pid=598 comm="(systemd)")
+Mar 16 10:45:23 mpouzol dbus-daemon[286]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Mar 16 10:45:23 mpouzol systemd[598]: pam_systemd_home(systemd-user:account): systemd-homed is not available: Unit dbus-org.freedesktop.home1.service not found.
+Mar 16 10:45:23 mpouzol audit[598]: USER_ACCT pid=598 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_access,pam_unix,pam_permit,pam_time acct="maxime" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:23 mpouzol audit[598]: CRED_ACQ pid=598 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="maxime" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+Mar 16 10:45:23 mpouzol systemd[598]: pam_warn(systemd-user:setcred): function=[pam_sm_setcred] flags=0x8002 service=[systemd-user] terminal=[] user=[maxime] ruser=[<unknown>] rhost=[<unknown>]
+Mar 16 10:45:23 mpouzol audit[598]: SYSCALL arch=c000003e syscall=1 success=yes exit=4 a0=9 a1=7fffeea8a5b0 a2=4 a3=0 items=0 ppid=1 pid=598 auid=1001 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4 comm="(systemd)" exe="/usr/lib/systemd/systemd" key=(null)
+Mar 16 10:45:23 mpouzol audit: PROCTITLE proctitle="(systemd)"
+Mar 16 10:45:23 mpouzol systemd[598]: pam_unix(systemd-user:session): session opened for user maxime(uid=1001) by (uid=0)
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol systemd[598]: pam_env(systemd-user:session): deprecated reading of user environment enabled
+Mar 16 10:45:23 mpouzol audit[598]: USER_START pid=598 uid=0 auid=1001 ses=4 msg='op=PAM:session_open grantors=pam_loginuid,pam_loginuid,pam_keyinit,pam_systemd_home,pam_limits,pam_unix,pam_permit,pam_mail,pam_systemd,pam_env acct="maxime" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:23 mpouzol audit: BPF prog-id=23 op=LOAD
+Mar 16 10:45:23 mpouzol audit[598]: SYSCALL arch=c000003e syscall=321 success=yes exit=8 a0=5 a1=7ffd3a42e120 a2=78 a3=7ffd3a42e120 items=0 ppid=1 pid=598 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=(none) ses=4 comm="systemd" exe="/usr/lib/systemd/systemd" key=(null)
+Mar 16 10:45:23 mpouzol audit: PROCTITLE proctitle=2F7573722F6C69622F73797374656D642F73797374656D64002D2D75736572
+Mar 16 10:45:23 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:23 mpouzol systemd[598]: Queued start job for default target Main User Target.
+Mar 16 10:45:23 mpouzol systemd-journald[241]: File /var/log/journal/3b149d3eb7cc4afeb64aad0d36b952cf/user-1001.journal corrupted or uncleanly shut down, renaming and replacing.
+Mar 16 10:45:23 mpouzol systemd[598]: Created slice User Application Slice.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Paths.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Timers.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting D-Bus User Message Bus Socket...
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on GnuPG network certificate management daemon.
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on GCR ssh-agent wrapper.
+Mar 16 10:45:23 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user@1001 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on GnuPG cryptographic agent and passphrase cache.
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on p11-kit server.
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on PipeWire Multimedia System Socket.
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on Sound System.
+Mar 16 10:45:23 mpouzol systemd[598]: Listening on D-Bus User Message Bus Socket.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Sockets.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Basic System.
+Mar 16 10:45:23 mpouzol systemd[1]: Started User Manager for UID 1001.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting Update XDG user dir configuration...
+Mar 16 10:45:23 mpouzol systemd[1]: Started Session 3 of User maxime.
+Mar 16 10:45:23 mpouzol systemd[598]: Finished Update XDG user dir configuration.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Main User Target.
+Mar 16 10:45:23 mpouzol systemd[598]: Startup finished in 149ms.
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gdm-password][589]: pam_env(gdm-password:session): deprecated reading of user environment enabled
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gdm-password][589]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Mar 16 10:45:23 mpouzol audit[589]: USER_START pid=589 uid=0 auid=1001 ses=3 msg='op=PAM:session_open grantors=pam_loginuid,pam_keyinit,pam_systemd_home,pam_limits,pam_unix,pam_permit,pam_mail,pam_systemd,pam_env,pam_gnome_keyring acct="maxime" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty2 res=success'
+Mar 16 10:45:23 mpouzol kernel: rfkill: input handler enabled
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol systemd[598]: Created slice User Core Session Slice.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting D-Bus User Message Bus...
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol systemd[598]: Started D-Bus User Message Bus.
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol systemd[598]: Created slice Slice /app/gnome-session-manager.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target GNOME Wayland Session.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Session services which should run early before the graphical session is brought up.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target GNOME Shell.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting Monitor Session leader for GNOME Session...
+Mar 16 10:45:23 mpouzol systemd[598]: Started Monitor Session leader for GNOME Session.
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target Tasks to be run before GNOME Session starts.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting GNOME Session Manager (session: gnome)...
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:23 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:23 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:23 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:23 mpouzol gnome-keyring-ssh.desktop[635]: SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+Mar 16 10:45:23 mpouzol gnome-keyring-secrets.desktop[637]: SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+Mar 16 10:45:23 mpouzol gnome-keyring-pkcs11.desktop[638]: SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+Mar 16 10:45:23 mpouzol systemd[598]: Started GNOME Session Manager (session: gnome).
+Mar 16 10:45:23 mpouzol systemd[598]: Reached target GNOME Session Manager is ready.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting GNOME Shell on Wayland...
+Mar 16 10:45:23 mpouzol systemd[598]: Starting GNOME Shell on X11...
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Skipped due to 'exec-condition'.
+Mar 16 10:45:23 mpouzol systemd[598]: Condition check resulted in GNOME Shell on X11 being skipped.
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Scheduled restart job, restart counter is at 1.
+Mar 16 10:45:23 mpouzol systemd[598]: Stopped GNOME Shell on X11.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting GNOME Shell on X11...
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Skipped due to 'exec-condition'.
+Mar 16 10:45:23 mpouzol systemd[598]: Condition check resulted in GNOME Shell on X11 being skipped.
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Scheduled restart job, restart counter is at 2.
+Mar 16 10:45:23 mpouzol systemd[598]: Stopped GNOME Shell on X11.
+Mar 16 10:45:23 mpouzol systemd[598]: Starting GNOME Shell on X11...
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Skipped due to 'exec-condition'.
+Mar 16 10:45:23 mpouzol systemd[598]: Condition check resulted in GNOME Shell on X11 being skipped.
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Scheduled restart job, restart counter is at 3.
+Mar 16 10:45:23 mpouzol systemd[598]: Stopped GNOME Shell on X11.
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Start request repeated too quickly.
+Mar 16 10:45:23 mpouzol systemd[598]: org.gnome.Shell@x11.service: Skipped due to 'exec-condition'.
+Mar 16 10:45:23 mpouzol systemd[598]: Started GNOME Shell on X11.
+Mar 16 10:45:23 mpouzol gnome-shell[641]: Running GNOME Shell (using mutter 41.4) as a Wayland display server
+Mar 16 10:45:23 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Added device '/dev/dri/card0' (vmwgfx) using non-atomic mode setting.
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[641]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Do not want to use software renderer (llvmpipe (LLVM 13.0.1, 256 bits)), falling back to CPU copy path
+Mar 16 10:45:24 mpouzol gnome-shell[641]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:24 mpouzol gnome-shell[641]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:24 mpouzol gnome-shell[641]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:24 mpouzol gnome-shell[641]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Created gbm renderer for '/dev/dri/card0'
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Boot VGA GPU /dev/dri/card0 selected as primary
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:24 mpouzol systemd[598]: Starting Virtual filesystem service...
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.Daemon'
+Mar 16 10:45:24 mpouzol systemd[598]: Started Virtual filesystem service.
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Disabling DMA buffer screen sharing for driver 'vmwgfx'.
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.14' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:24 mpouzol systemd[598]: Starting Accessibility services bus...
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.a11y.Bus'
+Mar 16 10:45:24 mpouzol systemd[598]: Started Accessibility services bus.
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Using public X11 display :0, (using :1 for managed services)
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Using Wayland display name 'wayland-0'
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Skipping parental controls support as it’s disabled
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Will monitor session 3
+Mar 16 10:45:24 mpouzol gnome-shell[641]: Failed to launch ibus-daemon: Failed to execute child process “ibus-daemon” (No such file or directory)
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.gnome.Shell.CalendarServer' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gnome.evolution.dataserver.Sources5' unit='evolution-source-registry.service' requested by ':1.16' (uid=1001 pid=686 comm="/usr/lib/gnome-shell-calendar-server")
+Mar 16 10:45:24 mpouzol systemd[598]: Starting Evolution source registry...
+Mar 16 10:45:24 mpouzol systemd[598]: Starting Sound Service...
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Successfully made thread 696 of process 696 owned by '1001' high priority at nice level -11.
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 2 users.
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.gnome.OnlineAccounts' requested by ':1.17' (uid=1001 pid=692 comm="/usr/lib/evolution-source-registry")
+Mar 16 10:45:24 mpouzol polkitd[333]: Registered Authentication Agent for unix-session:3 (system bus name :1.41 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C)
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'Center' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: The decibel volume range for element 'LFE' (-4650 dB - -2400 dB) has negative maximum. Disabling the decibel range.
+Mar 16 10:45:24 mpouzol gnome-shell[381]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+Mar 16 10:45:24 mpouzol systemd[598]: Started Evolution source registry.
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.freedesktop.Telepathy.AccountManager' requested by ':1.19' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:24 mpouzol pulseaudio[696]: Disabling timer-based scheduling because running inside a VM.
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 2 users.
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Successfully made thread 702 of process 696 owned by '1001' RT at priority 5.
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Supervising 5 threads of 2 processes of 2 users.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: Disabling timer-based scheduling because running inside a VM.
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.UDisks2VolumeMonitor' unit='gvfs-udisks2-volume-monitor.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Supervising 5 threads of 2 processes of 2 users.
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar8' unit='evolution-calendar-factory.service' requested by ':1.16' (uid=1001 pid=686 comm="/usr/lib/gnome-shell-calendar-server")
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.Shell.CalendarServer'
+Mar 16 10:45:24 mpouzol systemd[598]: Starting Evolution calendar service...
+Mar 16 10:45:24 mpouzol systemd[598]: Starting Virtual filesystem service - disk device monitor...
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Successfully made thread 703 of process 696 owned by '1001' RT at priority 5.
+Mar 16 10:45:24 mpouzol rtkit-daemon[419]: Supervising 6 threads of 2 processes of 2 users.
+Mar 16 10:45:24 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.freedesktop.Telepathy.AccountManager'
+Mar 16 10:45:24 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.freedesktop.UDisks2' unit='udisks2.service' requested by ':1.46' (uid=1001 pid=711 comm="/usr/lib/gvfs-udisks2-volume-monitor")
+Mar 16 10:45:24 mpouzol systemd[1]: Starting Disk Manager...
+Mar 16 10:45:24 mpouzol udisksd[716]: udisks daemon version 2.9.4 starting
+Mar 16 10:45:24 mpouzol dbus-daemon[286]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service' requested by ':1.47' (uid=1001 pid=696 comm="/usr/bin/pulseaudio --daemonize=no --log-target=jo")
+Mar 16 10:45:24 mpouzol dbus-daemon[286]: [system] Activation via systemd failed for unit 'dbus-org.bluez.service': Unit dbus-org.bluez.service not found.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: stat('/etc/pulse/default.pa.d'): No such file or directory
+Mar 16 10:45:24 mpouzol systemd[598]: Started Sound Service.
+Mar 16 10:45:24 mpouzol pulseaudio[696]: GetManagedObjects() failed: org.freedesktop.systemd1.NoSuchUnit: Unit dbus-org.bluez.service not found.
+Mar 16 10:45:25 mpouzol goa-daemon[699]: goa-daemon version 3.40.1 starting
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.evolution.dataserver.Calendar8'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Evolution calendar service.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.gnome.Identity' requested by ':1.24' (uid=1001 pid=699 comm="/usr/lib/goa-daemon")
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='ca.desrt.dconf' unit='dconf.service' requested by ':1.22' (uid=1001 pid=708 comm="/usr/lib/evolution-calendar-factory")
+Mar 16 10:45:25 mpouzol systemd[598]: Starting User preferences database...
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.OnlineAccounts'
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'ca.desrt.dconf'
+Mar 16 10:45:25 mpouzol systemd[598]: Started User preferences database.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook10' unit='evolution-addressbook-factory.service' requested by ':1.22' (uid=1001 pid=708 comm="/usr/lib/evolution-calendar-factory")
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.Identity'
+Mar 16 10:45:25 mpouzol systemd[598]: Starting Evolution address book service...
+Mar 16 10:45:25 mpouzol dbus-daemon[286]: [system] Successfully activated service 'org.freedesktop.UDisks2'
+Mar 16 10:45:25 mpouzol systemd[1]: Started Disk Manager.
+Mar 16 10:45:25 mpouzol audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=udisks2 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:25 mpouzol kernel: kauditd_printk_skb: 23 callbacks suppressed
+Mar 16 10:45:25 mpouzol kernel: audit: type=1130 audit(1647427525.116:68): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=udisks2 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:25 mpouzol udisksd[716]: Acquired the name org.freedesktop.UDisks2 on the system message bus
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.evolution.dataserver.AddressBook10'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Evolution address book service.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Virtual filesystem service - disk device monitor.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.MTPVolumeMonitor' unit='gvfs-mtp-volume-monitor.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:25 mpouzol systemd[598]: Starting Virtual filesystem service - Media Transfer Protocol monitor...
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.MTPVolumeMonitor'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Virtual filesystem service - Media Transfer Protocol monitor.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:25 mpouzol systemd[598]: Starting Virtual filesystem service - GNOME Online Accounts monitor...
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.GoaVolumeMonitor'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Virtual filesystem service - GNOME Online Accounts monitor.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.GPhoto2VolumeMonitor' unit='gvfs-gphoto2-volume-monitor.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:25 mpouzol systemd[598]: Starting Virtual filesystem service - digital camera monitor...
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.GPhoto2VolumeMonitor'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Virtual filesystem service - digital camera monitor.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.AfcVolumeMonitor' unit='gvfs-afc-volume-monitor.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:25 mpouzol systemd[598]: Starting Virtual filesystem service - Apple File Conduit monitor...
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.AfcVolumeMonitor'
+Mar 16 10:45:25 mpouzol systemd[598]: Started Virtual filesystem service - Apple File Conduit monitor.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.gnome.Shell.Notifications' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:25 mpouzol at-spi-bus-launcher[678]: dbus-daemon[678]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:45:25 mpouzol at-spi-bus-launcher[678]: dbus-daemon[678]: Successfully activated service 'org.a11y.atspi.Registry'
+Mar 16 10:45:25 mpouzol at-spi-bus-launcher[789]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME Shell on Wayland.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME Session is initialized.
+Mar 16 10:45:25 mpouzol systemd[598]: GNOME session X11 services is inactive.
+Mar 16 10:45:25 mpouzol systemd[598]: Dependency failed for GNOME XSettings service.
+Mar 16 10:45:25 mpouzol systemd[598]: org.gnome.SettingsDaemon.XSettings.service: Job org.gnome.SettingsDaemon.XSettings.service/start failed with result 'dependency'.
+Mar 16 10:45:25 mpouzol systemd[598]: gnome-session-x11-services-ready.target: Job gnome-session-x11-services-ready.target/verify-active failed with result 'dependency'.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME Session (session: gnome).
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME XSettings target.
+Mar 16 10:45:25 mpouzol systemd[598]: Starting Signal initialization done to GNOME Session Manager...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME accessibility service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME color management service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME date & time service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME maintenance of expirable data service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME keyboard configuration service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME keyboard shortcuts service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME power management service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME printer notifications service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME RFKill support service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME FreeDesktop screensaver service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME file sharing service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME smartcard service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME sound sample caching service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME USB protection service...
+Mar 16 10:45:25 mpouzol systemd[598]: Starting GNOME Wacom tablet support service...
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.Shell.Notifications'
+Mar 16 10:45:25 mpouzol gnome-session-binary[626]: Entering running state
+Mar 16 10:45:25 mpouzol systemd[598]: Finished Signal initialization done to GNOME Session Manager.
+Mar 16 10:45:25 mpouzol kernel: rfkill: input handler disabled
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.gnome.ScreenSaver' requested by ':1.41' (uid=1001 pid=845 comm="/usr/lib/gsd-usb-protection")
+Mar 16 10:45:25 mpouzol kernel: Service: Shared Clipboard
+Mar 16 10:45:25 mpouzol gnome-session[626]: gnome-session-binary[626]: GnomeDesktop-WARNING: Could not create transient scope for PID 814: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Process with ID 814 does not exist.
+Mar 16 10:45:25 mpouzol gnome-session-binary[626]: GnomeDesktop-WARNING: Could not create transient scope for PID 814: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Process with ID 814 does not exist.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME accessibility service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME USB protection service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME date & time service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME printer notifications service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME RFKill support service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME FreeDesktop screensaver service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME file sharing service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME smartcard service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME maintenance of expirable data service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME sound sample caching service.
+Mar 16 10:45:25 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:25 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:25 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:25 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:25 mpouzol systemd[598]: Started Application launched by gnome-session-binary.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME accessibility target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME date & time target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME maintenance of expirable data target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME printer notifications target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME RFKill support target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME FreeDesktop screensaver target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME file sharing target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME smartcard target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME sound sample caching target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME USB protection target.
+Mar 16 10:45:25 mpouzol kernel: Service: Host Version Check
+Mar 16 10:45:25 mpouzol gnome-session[626]: gnome-session-binary[626]: GnomeDesktop-WARNING: Could not create transient scope for PID 863: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Process with ID 863 does not exist.
+Mar 16 10:45:25 mpouzol gnome-session-binary[626]: GnomeDesktop-WARNING: Could not create transient scope for PID 863: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Process with ID 863 does not exist.
+Mar 16 10:45:25 mpouzol kernel: Service: Seamless
+Mar 16 10:45:25 mpouzol kernel: Service: Drag and Drop (DnD)
+Mar 16 10:45:25 mpouzol gnome-shell[641]: No permission to control network connections: Polkit.Error: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:25 mpouzol gnome-shell-cal[686]: e_cal_client_set_default_timezone: assertion 'zone != NULL' failed
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.ScreenSaver'
+Mar 16 10:45:25 mpouzol gnome-shell[929]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:25 mpouzol gnome-shell[929]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:25 mpouzol gnome-shell-cal[686]: e_cal_client_set_default_timezone: assertion 'zone != NULL' failed
+Mar 16 10:45:25 mpouzol gnome-shell[929]: VMware: No 3D enabled (0, Success).
+Mar 16 10:45:25 mpouzol gnome-shell[929]: libEGL warning: DRI2: failed to create dri screen
+Mar 16 10:45:25 mpouzol gnome-shell-cal[686]: e_cal_client_set_default_timezone: assertion 'zone != NULL' failed
+Mar 16 10:45:25 mpouzol gsd-usb-protect[845]: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.usbguard1 was not provided by any .service files
+Mar 16 10:45:25 mpouzol gnome-shell-cal[686]: e_cal_client_set_default_timezone: assertion 'zone != NULL' failed
+Mar 16 10:45:25 mpouzol gnome-shell[929]: Failed to initialize glamor, falling back to sw
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME color management service.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME color management target.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME keyboard configuration service.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME keyboard configuration target.
+Mar 16 10:45:25 mpouzol gnome-shell[955]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Mar 16 10:45:25 mpouzol gnome-shell[955]: > Warning:          Could not resolve keysym XF86EmojiPicker
+Mar 16 10:45:25 mpouzol gnome-shell[955]: Errors from xkbcomp are not fatal to the X server
+Mar 16 10:45:25 mpouzol gnome-software[817]: Failed to load /usr/lib/gnome-software/plugins-16/libgs_plugin_flatpak.so: failed to open plugin /usr/lib/gnome-software/plugins-16/libgs_plugin_flatpak.so: libflatpak.so.0: cannot open shared object file: No such file or directory
+Mar 16 10:45:25 mpouzol gnome-software[817]: Failed to load /usr/lib/gnome-software/plugins-16/libgs_plugin_fwupd.so: failed to open plugin /usr/lib/gnome-software/plugins-16/libgs_plugin_fwupd.so: libfwupd.so.2: cannot open shared object file: No such file or directory
+Mar 16 10:45:25 mpouzol gnome-software[817]: Failed to load /usr/lib/gnome-software/plugins-16/libgs_plugin_malcontent.so: failed to open plugin /usr/lib/gnome-software/plugins-16/libgs_plugin_malcontent.so: libmalcontent-0.so.0: cannot open shared object file: No such file or directory
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME Wacom tablet support service.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME Wacom tablet support target.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME keyboard shortcuts service.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME keyboard shortcuts target.
+Mar 16 10:45:25 mpouzol systemd[598]: Started GNOME power management service.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME power management target.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME Session.
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target GNOME Wayland Session (session: gnome).
+Mar 16 10:45:25 mpouzol systemd[598]: Reached target Current graphical user session.
+Mar 16 10:45:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating service name='org.gnome.Shell.Screencast' requested by ':1.49' (uid=1001 pid=807 comm="/usr/lib/gsd-media-keys")
+Mar 16 10:45:25 mpouzol gnome-software[817]: enabled plugins: appstream, os-release, provenance, generic-updates, hardcoded-blocklist, hardcoded-popular, modalias, provenance-license, rewrite-resource, icons
+Mar 16 10:45:25 mpouzol gnome-software[817]: disabled plugins: dpkg, dummy, fedora-langpacks, fedora-pkgdb-collections, repos
+Mar 16 10:45:26 mpouzol gsd-color[801]: failed to get edid: unable to get EDID for output
+Mar 16 10:45:26 mpouzol gsd-color[801]: unable to get EDID for xrandr-Virtual-1: unable to get EDID for output
+Mar 16 10:45:26 mpouzol gsd-color[442]: unable to get EDID for xrandr-Virtual-1: unable to get EDID for output
+Mar 16 10:45:26 mpouzol gnome-software[817]: /etc/PackageKit/Vendor.conf file not found
+Mar 16 10:45:26 mpouzol gsd-media-keys[807]: Failed to grab accelerator for keybinding settings:hibernate
+Mar 16 10:45:26 mpouzol gsd-media-keys[807]: Failed to grab accelerator for keybinding settings:playback-repeat
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Failed to launch ibus-daemon: Failed to execute child process “ibus-daemon” (No such file or directory)
+Mar 16 10:45:26 mpouzol systemd[598]: Reached target GNOME session X11 services.
+Mar 16 10:45:26 mpouzol systemd[598]: Starting GNOME XSettings service...
+Mar 16 10:45:26 mpouzol gnome-shell[1005]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Mar 16 10:45:26 mpouzol gnome-shell[1005]: > Warning:          Unsupported maximum keycode 708, clipping.
+Mar 16 10:45:26 mpouzol gnome-shell[1005]: >                   X11 cannot support keycodes above 255.
+Mar 16 10:45:26 mpouzol gnome-shell[1005]: Errors from xkbcomp are not fatal to the X server
+Mar 16 10:45:26 mpouzol gnome-shell[641]: GNOME Shell started at Wed Mar 16 2022 10:45:25 GMT+0000 (Coordinated Universal Time)
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Registering session with GDM
+Mar 16 10:45:26 mpouzol gdm-launch-environment][353]: GLib-GObject: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Mar 16 10:45:26 mpouzol audit[353]: USER_END pid=353 uid=0 auid=120 ses=1 msg='op=PAM:session_close grantors=pam_loginuid,pam_keyinit,pam_succeed_if,pam_permit,pam_systemd,pam_env acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:26 mpouzol audit[353]: CRED_DISP pid=353 uid=0 auid=120 ses=1 msg='op=PAM:setcred grantors=pam_permit acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:26 mpouzol kernel: audit: type=1106 audit(1647427526.266:69): pid=353 uid=0 auid=120 ses=1 msg='op=PAM:session_close grantors=pam_loginuid,pam_keyinit,pam_succeed_if,pam_permit,pam_systemd,pam_env acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:26 mpouzol kernel: audit: type=1104 audit(1647427526.266:70): pid=353 uid=0 auid=120 ses=1 msg='op=PAM:setcred grantors=pam_permit acct="gdm" exe="/usr/lib/gdm-session-worker" hostname=mpouzol addr=? terminal=/dev/tty1 res=success'
+Mar 16 10:45:26 mpouzol systemd-logind[288]: Session 1 logged out. Waiting for processes to exit.
+Mar 16 10:45:26 mpouzol systemd[1]: session-1.scope: Deactivated successfully.
+Mar 16 10:45:26 mpouzol polkitd[333]: Unregistered Authentication Agent for unix-session:1 (system bus name :1.11, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C) (disconnected from bus)
+Mar 16 10:45:26 mpouzol systemd[1]: session-1.scope: Consumed 3.227s CPU time.
+Mar 16 10:45:26 mpouzol systemd-logind[288]: Removed session 1.
+Mar 16 10:45:26 mpouzol gdm[295]: Gdm: Child process -367 was already dead.
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Builder.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Calculator.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.clocks.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Dictionary.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Documents.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Evince/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.gedit.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Maps.desktop/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: adding wildcard app */*/*/org.gnome.Weather/* to plugin cache
+Mar 16 10:45:26 mpouzol gnome-software[817]: Only 0 apps for recent list, hiding
+Mar 16 10:45:26 mpouzol gnome-software[817]: Only 0 apps for popular list, hiding
+Mar 16 10:45:26 mpouzol gnome-software[817]: failed to get featured apps: no apps to show
+Mar 16 10:45:26 mpouzol gnome-software[817]: updates-shell: failed to get updates: no plugin could handle get-updates
+Mar 16 10:45:26 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gnome.Shell.Screencast'
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:26 mpouzol gnome-shell[641]: Error checking authorization for action id org.freedesktop.NetworkManager.network-control: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.freedesktop.NetworkManager.network-control is not registered
+Mar 16 10:45:26 mpouzol systemd[598]: Started GNOME XSettings service.
+Mar 16 10:45:26 mpouzol systemd[598]: Reached target GNOME session X11 services.
+Mar 16 10:45:26 mpouzol gnome-shell[641]: ATK Bridge is disabled but a11y has already been enabled.
+Mar 16 10:45:26 mpouzol kernel: Worker loop running
+Mar 16 10:45:26 mpouzol systemd[598]: Started VTE child process 1043 launched by tilda process 861.
+Mar 16 10:45:26 mpouzol tilda.desktop[861]: Tilda has started. Press F1 to pull down the window.
+Mar 16 10:45:27 mpouzol dhcpcd[291]: enp0s3: leased 10.0.2.15 for 86400 seconds
+Mar 16 10:45:27 mpouzol dhcpcd[291]: enp0s3: adding route to 10.0.2.0/24
+Mar 16 10:45:27 mpouzol dhcpcd[291]: enp0s3: adding default route via 10.0.2.2
+Mar 16 10:45:33 mpouzol dhcpcd[291]: enp0s3: no IPv6 Routers available
+Mar 16 10:45:36 mpouzol systemd[1]: Stopping User Manager for UID 120...
+Mar 16 10:45:36 mpouzol systemd[359]: Activating special unit Exit the Session...
+Mar 16 10:45:36 mpouzol systemd[359]: Stopped target Main User Target.
+Mar 16 10:45:36 mpouzol systemd[359]: Stopping D-Bus User Message Bus...
+Mar 16 10:45:36 mpouzol systemd[359]: Stopped D-Bus User Message Bus.
+Mar 16 10:45:36 mpouzol systemd[359]: Removed slice User Core Session Slice.
+Mar 16 10:45:36 mpouzol systemd[359]: Stopped target Basic System.
+Mar 16 10:45:36 mpouzol systemd[359]: Stopped target Paths.
+Mar 16 10:45:36 mpouzol systemd[359]: Stopped target Sockets.
+Mar 16 10:45:36 mpouzol systemd[359]: Stopped target Timers.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed D-Bus User Message Bus Socket.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed GnuPG network certificate management daemon.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed GCR ssh-agent wrapper.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Mar 16 10:45:36 mpouzol systemd[359]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+Mar 16 10:45:36 mpouzol systemd[359]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+Mar 16 10:45:36 mpouzol systemd[359]: Closed GnuPG cryptographic agent and passphrase cache.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed p11-kit server.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed PipeWire Multimedia System Socket.
+Mar 16 10:45:36 mpouzol systemd[359]: Closed Sound System.
+Mar 16 10:45:36 mpouzol systemd[359]: Removed slice User Application Slice.
+Mar 16 10:45:36 mpouzol systemd[359]: Reached target Shutdown.
+Mar 16 10:45:36 mpouzol systemd[359]: Finished Exit the Session.
+Mar 16 10:45:36 mpouzol systemd[359]: Reached target Exit the Session.
+Mar 16 10:45:36 mpouzol systemd[360]: pam_warn(systemd-user:setcred): function=[pam_sm_setcred] flags=0x8004 service=[systemd-user] terminal=[] user=[gdm] ruser=[<unknown>] rhost=[<unknown>]
+Mar 16 10:45:36 mpouzol systemd[1]: user@120.service: Deactivated successfully.
+Mar 16 10:45:36 mpouzol systemd[1]: Stopped User Manager for UID 120.
+Mar 16 10:45:36 mpouzol audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user@120 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:36 mpouzol systemd[1]: Stopping User Runtime Directory /run/user/120...
+Mar 16 10:45:36 mpouzol kernel: audit: type=1131 audit(1647427536.576:71): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user@120 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:36 mpouzol systemd[1]: run-user-120.mount: Deactivated successfully.
+Mar 16 10:45:36 mpouzol systemd[1]: user-runtime-dir@120.service: Deactivated successfully.
+Mar 16 10:45:36 mpouzol systemd[1]: Stopped User Runtime Directory /run/user/120.
+Mar 16 10:45:36 mpouzol audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@120 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:36 mpouzol systemd[1]: Removed slice User Slice of UID 120.
+Mar 16 10:45:36 mpouzol systemd[1]: user-120.slice: Consumed 3.562s CPU time.
+Mar 16 10:45:36 mpouzol kernel: audit: type=1131 audit(1647427536.583:72): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@120 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:47 mpouzol systemd[598]: Started Application launched by gnome-shell.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 3 threads of 1 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Successfully made thread 1235 of process 1128 owned by '1001' RT at priority 10.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:49 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:50 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:54 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:54 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:55 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:55 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:45:55 mpouzol systemd[1]: systemd-localed.service: Deactivated successfully.
+Mar 16 10:45:55 mpouzol audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:55 mpouzol kernel: audit: type=1131 audit(1647427555.806:73): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:55 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:55 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:55 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:55 mpouzol kernel: audit: type=1334 audit(1647427555.870:74): prog-id=0 op=UNLOAD
+Mar 16 10:45:55 mpouzol kernel: audit: type=1334 audit(1647427555.870:75): prog-id=0 op=UNLOAD
+Mar 16 10:45:55 mpouzol kernel: audit: type=1334 audit(1647427555.870:76): prog-id=0 op=UNLOAD
+Mar 16 10:45:55 mpouzol systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Mar 16 10:45:55 mpouzol audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:55 mpouzol kernel: audit: type=1131 audit(1647427555.970:77): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:45:56 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:56 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:56 mpouzol audit: BPF prog-id=0 op=UNLOAD
+Mar 16 10:45:56 mpouzol kernel: audit: type=1334 audit(1647427556.036:78): prog-id=0 op=UNLOAD
+Mar 16 10:45:56 mpouzol kernel: audit: type=1334 audit(1647427556.036:79): prog-id=0 op=UNLOAD
+Mar 16 10:45:56 mpouzol kernel: audit: type=1334 audit(1647427556.036:80): prog-id=0 op=UNLOAD
+Mar 16 10:46:04 mpouzol firefox.desktop[1354]: ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 16 10:46:05 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:05 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:07 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:07 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:07 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:07 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:08 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:08 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:10 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:10 mpouzol rtkit-daemon[419]: Supervising 4 threads of 2 processes of 1 users.
+Mar 16 10:46:13 mpouzol systemd[598]: Started Application launched by gnome-shell.
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Guake not running, starting it
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Loading Gnome schema from: /usr/share/glib-2.0/schemas
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Language previously loaded from: /usr/share/locale
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Guake Terminal 3.8.6.dev0
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: VTE 0.66.2
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Gtk 3.24.33
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: created fresh notebook for workspace 0
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Spawning new terminal at /home/maxime
+Mar 16 10:46:14 mpouzol systemd[598]: Started VTE child process 1565 launched by guake process 1557.
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: current workspace is 0
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: can't bind show-focus key
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Spawning new terminal at /home/maxime/Documents/Assignment00/linux
+Mar 16 10:46:14 mpouzol systemd[598]: Started VTE child process 1601 launched by guake process 1557.
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Spawning new terminal at /home/maxime/Documents/Assignment00
+Mar 16 10:46:14 mpouzol systemd[598]: Started VTE child process 1612 launched by guake process 1557.
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Guake tabs restored from /home/maxime/.config/guake/session.json
+Mar 16 10:46:14 mpouzol guake.desktop[1557]: Guake initialized
+Mar 16 10:46:19 mpouzol geoclue[422]: Service not used for 60 seconds. Shutting down..
+Mar 16 10:46:19 mpouzol systemd[1]: geoclue.service: Deactivated successfully.
+Mar 16 10:46:19 mpouzol audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:46:19 mpouzol kernel: audit: type=1131 audit(1647427579.800:81): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Mar 16 10:46:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service' requested by ':1.11' (uid=1001 pid=641 comm="/usr/bin/gnome-shell")
+Mar 16 10:46:25 mpouzol systemd[598]: Starting Virtual filesystem metadata service...
+Mar 16 10:46:25 mpouzol dbus-daemon[614]: [session uid=1001 pid=614] Successfully activated service 'org.gtk.vfs.Metadata'
+Mar 16 10:46:25 mpouzol systemd[598]: Started Virtual filesystem metadata service.
+Mar 16 10:46:32 mpouzol systemd[598]: Started Application launched by gnome-shell.
+Mar 16 10:46:32 mpouzol gnome-shell[641]: Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0xa0000c
+Mar 16 10:46:36 mpouzol guake.desktop[1557]: Guake tabs saved to /home/maxime/.config/guake/session.json
+Mar 16 10:46:37 mpouzol firefox.desktop[1452]: ###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+Mar 16 10:46:39 mpouzol guake.desktop[1557]: Guake tabs saved to /home/maxime/.config/guake/session.json
