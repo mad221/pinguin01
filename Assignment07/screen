@@ -1,0 +1,6 @@
+total 0
+drwxr-xr-x  2 root root 0 Apr  7 17:42 .
+drwx------ 47 root root 0 Apr  7 13:08 ..
+-rw-r--r--  1 root root 0 Apr  7 17:42 foo
+-rw-rw-rw-  1 root root 0 Apr  7 17:42 id
+-r--r--r--  1 root root 0 Apr  7 17:42 jiffies

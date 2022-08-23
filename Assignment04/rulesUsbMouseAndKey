@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEMS=="usb", RUN+="/bin/insmod /home/maxime/Documents/Assignment04/hello.ko"
