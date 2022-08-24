@@ -3,6 +3,11 @@
 #include <linux/module.h>
 #include <linux/slab.h>
 
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("mpouzol");
+MODULE_DESCRIPTION(" print sleep");
+
 int do_work(int *my_int)
 {
 		int x;
@@ -28,7 +33,7 @@ int my_init(void)
 		int x = 10;
 
 		x = do_work(&x);
-		return x;
+		return 0;
 }
 
 void my_exit(void)
