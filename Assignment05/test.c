@@ -4,98 +4,68 @@
 #include <linux/fs.h>
 
 #define BUF "mpouzol"
-#define BUF_LEN 8 
+#define BUF_LEN 7
+
 
 MODULE_DESCRIPTION("Misc Driver");
 MODULE_AUTHOR("mpouzol");
 MODULE_LICENSE("GPL");
 
-static int open(struct inode *inode, struct file *file)
-{
-    return 0;
-}
+static struct miscdevice device;
 
-static int close(struct inode *inodep, struct file *filp)
-{
-    return 0;
-}
-
-static ssize_t write(struct file *f, const char *buf, size_t len, loff_t *offset)
-{
-	char buffer[BUF_LEN];
-
-        if (len != BUF_LEN) 
-        {
-            return (-EFAULT);
-        }
-
-        if (copy_from_user(buffer, buf, BUF_LEN) != 0)
-        {
-            return (-EFAULT);
-        }
-        
-        if (strncmp(buffer, BUF, BUF_LEN) == 0)
-        {
-            return (BUF_LEN);
-        }
-        else
-        {
-            return (-EFAULT);
-        }
-}
-
-static ssize_t read(struct file *f, char *buffer, size_t length, loff_t *offset)
+static ssize_t module_read(struct file *f, char *buffer, size_t length, loff_t *offset)
 {
 	int res;
 	char *read_from = BUF + *offset;
 	size_t read_num = length < (BUF_LEN - *offset) ? length : (BUF_LEN - *offset);
 
-	if (read_num == 0)
-		return (0);
-
-	if ((res = copy_to_user(buffer, read_from, read_num)) == read_num)
-		return (-1);
-	else
-	{
-		*offset = BUF_LEN - res;
-		return (read_num - res);
+	if (read_num == 0) {
+		res = 0;
+		goto end;
 	}
+
+	res = copy_to_user(buffer, read_from, read_num);
+	if (res == read_num) {
+		res = -EIO;
+	} else {
+		*offset = BUF_LEN - res;
+		res = read_num - res;
+	}
+end:
+	return (res);
 }
 
-
-static const struct file_operations fops = {
-    .owner			= THIS_MODULE,
-    .open			= open,
-    .release        = close,
-    .write			= write,
-    .read			= read,
-};
-
-struct miscdevice device = {
-    .minor = MISC_DYNAMIC_MINOR,
-    .name = "fortytwo",
-    .fops = &fops,
-};
-
-static int __init misc_init(void)
+static ssize_t module_write(struct file *f, const char *buf, size_t len, loff_t *offset)
 {
-    int error;
+	char mybuf[BUF_LEN];
 
-    error = misc_register(&device);
-    if (error) {
-        pr_err("Unable to register Example Driver\n");
-        return error;
+	simple_write_to_buffer(mybuf, BUF_LEN, offset, buf, len);
+    
+	if ( strncmp(BUF, mybuf, BUF_LEN) == 0)
+    {
+		return BUF_LEN;
     }
 
-    pr_info("Registered  Driver fortytwo\n");
-    return 0;
+    return -EINVAL;
 }
 
-static void __exit misc_exit(void)
+static struct file_operations fops = {
+  .read = module_read,
+  .write = module_write,
+};
+
+int init_module(void)
 {
-    misc_deregister(&device);
-    pr_info("Deregister Driver fortytwo\n");
+	printk(KERN_INFO "Hello world!\n");
+	device.minor = MISC_DYNAMIC_MINOR;
+	device.name = "fortytwo";
+	device.fops = &fops;
+	return misc_register(&device);
 }
 
-module_init(misc_init)
-module_exit(misc_exit)
+void cleanup_module(void)
+{
+	printk(KERN_INFO "Cleaning up module.\n");
+	misc_deregister(&device);
+}
+
