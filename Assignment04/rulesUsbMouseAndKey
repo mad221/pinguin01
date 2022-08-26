@@ -1,2 +1,2 @@
-ACTION=="add", SUBSYSTEMS=="usb", ATTRS{idProduct}=="ff40" ,RUN+="/sbin/insmod /home/maxime/Documents/pinguin/Assignment04/hello.ko"
-ACTION=="unbind", SUBSYSTEMS=="usb", ENV{PRODUCT}=="2717/ff40/409" ,RUN+="/sbin/rmmod /home/maxime/Documents/pinguin/Assignment04/hello.ko"
+ACTION=="bind", SUBSYSTEMS=="usb", ENV{PRODUCT}=="cf3/e009/1", ENV{ID_VENDOR_ID}=="0cf3" ,RUN+="/sbin/insmod /home/maxime/Documents/pinguin/Assignment04/hello.ko"
+ACTION=="unbind", SUBSYSTEMS=="usb",ENV{PRODUCT}=="cf3/e009/1", ENV{ID_VENDOR_ID}=="0cf3" ,RUN+="/sbin/rmmod /home/maxime/Documents/pinguin/Assignment04/hello.ko"
