@@ -8,7 +8,7 @@
 
 #define BUF "mpouzol"
 #define BUF_LEN 8
-#define MAX_SIZE 1024
+#define MAX_SIZE 4096
 
 MODULE_DESCRIPTION("Misc Driver");
 MODULE_AUTHOR("mpouzol");
@@ -31,77 +31,75 @@ static int close(struct inode *inodep, struct file *filp)
 
 static ssize_t write(struct file *f, const char *buf, size_t len, loff_t *offset)
 {
-	char buffer[BUF_LEN];
-	
+	char mybuf[BUF_LEN];
 
-	if (len != BUF_LEN || copy_from_user(buffer, buf, BUF_LEN)  != BUF_LEN)
-	 	return (-EFAULT);
-	
-	if (strncmp(buffer, BUF, BUF_LEN) == 0)
-		return (BUF_LEN);
-	else
-		return (-EFAULT);
+	simple_write_to_buffer(mybuf, BUF_LEN, offset, buf, len);
+    
+	if ( strncmp(BUF, mybuf, BUF_LEN) == 0)
+    {
+		return BUF_LEN;
+    }
+
+    return -EINVAL;
 }
 
 static ssize_t read(struct file *f, char *buffer, size_t length, loff_t *offset)
 {
-	int ret;
+	int res;
 	char *read_from = BUF + *offset;
 	size_t read_num = length < (BUF_LEN - *offset) ? length : (BUF_LEN - *offset);
 
-	if (read_num == 0)
-		return (0);
-
-	if ((ret = copy_to_user(str, read_from, read_num)) == read_num)
-		return (-EFAULT);
-	else
-	{
-		*offset = BUF_LEN - ret;
-		return (read_num - ret);
+	if (read_num == 0) {
+		res = 0;
+		goto end;
 	}
+
+	res = copy_to_user(buffer, read_from, read_num);
+	if (res == read_num) {
+		res = -EIO;
+	} else {
+		*offset = BUF_LEN - res;
+		res = read_num - res;
+	}
+end:
+	return (res);
 }
 
 static ssize_t jiffies_read(struct file *f, char *buffer, size_t length, loff_t *offset)
 {
 	unsigned long time_stamp = jiffies;
-    char number[10];
+    char number[11];
     ssize_t ret = 0;
 
-    snprintf(number, 10,"%ld", time_stamp);
-   	ret = copy_to_user(buffer, number, 10);
-    return (ret);
+	memset(number, *offset, 11);
+    
+    snprintf(number, 11,"%ld", time_stamp);
+   	ret = copy_to_user(buffer, number, 11);
+
+    return simple_read_from_buffer(buffer, length, offset, number, 11);
 }
 
-static ssize_t foo_write(struct file *file, const char  *buffer, size_t len, loff_t *offset)
+static ssize_t foo_write(struct file *file, const char __user *buf,
+			 size_t len, loff_t *offset)
 {
-	ssize_t ret = 0;
-    if (len > MAX_SIZE)
-    {
-        return -EFAULT;
-    }
-
+	ssize_t res = 0;
 	mutex_lock(&foo_mutex);
-	memset(str, '\0', MAX_SIZE);
-    ret = copy_from_user(str, buffer, len);
-    mutex_unlock(&foo_mutex);
-
-	return (ret);
+	memset(str, 0, strlen(str));
+	res = simple_write_to_buffer(str, 4096, offset, buf, len);
+	mutex_unlock(&foo_mutex);
+	return res;
 }
 
-
-static ssize_t foo_read(struct file *file, char  *buffer, size_t len, loff_t *offset)
+static ssize_t foo_read(struct file *filep, char *buf, size_t len,
+			loff_t *offset)
 {
 	ssize_t ret = 0;
-
-    if (len > MAX_SIZE)
-    {
-        return -EFAULT;
-    }
 	mutex_lock(&foo_mutex);
-	ret = copy_to_user(buffer, str, MAX_SIZE);
+	ret = simple_read_from_buffer(buf, len, offset, str, MAX_SIZE);
 	mutex_unlock(&foo_mutex);
 	return ret;
 }
+
 
 static const struct file_operations fops = {
     .owner			= THIS_MODULE,
@@ -112,6 +110,9 @@ static const struct file_operations fops = {
 };
 
 static const struct file_operations jiffies_fops = {
+    .owner			= THIS_MODULE,
+    .open			= open,
+    .release        = close,
 	.read     =  jiffies_read,
 };
 

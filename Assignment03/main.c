@@ -1,8 +1,9 @@
-#include <linux/delay.h>
-#include <linux/kernel.h>
-#include <linux/module.h>
-#include <linux/slab.h>
+// SPDX-License-Identifier: GPL-2.0
 
+#include	<linux/delay.h>
+#include	<linux/kernel.h>
+#include	<linux/module.h>
+#include	<linux/slab.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("mpouzol");
@@ -15,14 +16,13 @@ int do_work(int *my_int)
 		int z;
 
 		for (x = 0; x < y; ++x)
-				udelay(10);
+			usleep_range(9, 10);
 
-		if (y < 10) {
-				/* 
-				 * That was a long sleep, tell userspace about it 
-				 */
-				pr_info("We slept a long time!");
-		}
+		if (y < 10)
+			/*
+			 *That was a long sleep, tell userspace about it
+			 */
+			pr_info("We slept a long time!");
 
 		z = x * y;
 		return z;
@@ -38,7 +38,6 @@ int my_init(void)
 
 void my_exit(void)
 {
-	return ;
 }
 
 module_init(my_init);
