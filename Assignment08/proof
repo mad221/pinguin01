@@ -1,0 +1,6 @@
+➜  Assignment08 git:(master) ✗ /usr/src/linux-5.16.14/scripts/checkpatch.pl main.c -no-tree -file --strict
+total: 0 errors, 0 warnings, 0 checks, 68 lines checked
+
+main.c has no obvious style problems and is ready for submission.
+➜  Assignment08 git:(master) ✗ date
+Thu Sep 15 05:28:26 PM UTC 2022
