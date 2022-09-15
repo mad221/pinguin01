@@ -6,6 +6,9 @@
 #include <linux/proc_fs.h>  
 #include <linux/seq_file.h>  
 #include <linux/fs_struct.h>
+#include <linux/ipc_namespace.h>
+#include <linux/mount.h>
+
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("mpouzol");

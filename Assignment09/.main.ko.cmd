@@ -1,0 +1,1 @@
+cmd_/root/pinguin01/Assignment09/main.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T arch/x86/module.lds -o /root/pinguin01/Assignment09/main.ko /root/pinguin01/Assignment09/main.o /root/pinguin01/Assignment09/main.mod.o;  true

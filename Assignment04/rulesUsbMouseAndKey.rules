@@ -1,0 +1,2 @@
+ACTION=="bind", SUBSYSTEMS=="usb", ENV{PRODUCT}=="80ee/21/100", ENV{ID_VENDOR_ID}=="80ee" ,RUN+="/sbin/insmod /root/pinguin01/Assignment04/hello.ko"
+ACTION=="unbind", SUBSYSTEMS=="usb",ENV{PRODUCT}=="80ee/21/100", ENV{ID_VENDOR_ID}=="80ee" ,RUN+="/sbin/rmmod /root/pinguin01/Assignment04/hello.ko"
